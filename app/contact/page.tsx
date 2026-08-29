@@ -1,5 +1,6 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
 import { MapPin, Phone, Mail, MessageCircle, Building2, Facebook, Sparkles } from 'lucide-react';
 
 export default function Contact() {
