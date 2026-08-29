@@ -12,7 +12,7 @@ export default function Footer() {
               <span>RACO Child Orphanage</span>
             </div>
             <p className="text-sm leading-relaxed">
-              Dedicated to restoring hope, providing education, and giving every vulnerable child a safe place to grow.
+              A faith-based care and protection center providing hope, dignity, and a future to orphans and vulnerable children in rural communities.
             </p>
           </div>
 
@@ -20,33 +20,43 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/" className="hover:text-amber-500 transition">Home</Link></li>
-              <li><Link href="/about" className="hover:text-amber-500 transition">About Leadership</Link></li>
+              <li><Link href="/about" className="hover:text-amber-500 transition">About Us</Link></li>
               <li><Link href="/programs" className="hover:text-amber-500 transition">Our Programs</Link></li>
               <li><Link href="/donate" className="hover:text-amber-500 transition">Make a Donation</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Programs</h4>
+            <h4 className="text-white font-semibold mb-4">Core Initiatives</h4>
             <ul className="space-y-2 text-sm">
-              <li>Residential Care & Housing</li>
-              <li>Primary & Basic Education</li>
-              <li>Healthcare & Nutrition</li>
-              <li>Community Outreach</li>
+              <li>Free Nursery & Primary School</li>
+              <li>Rural Women & Widow Empowerment</li>
+              <li>Youth Skills & Vocational Training</li>
+              <li>Free Medical Outreach & Life Centre</li>
+              <li>Support for the Aged</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact Info</h4>
+            <h4 className="text-white font-semibold mb-4">Contact & Headquarters</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-3"><MapPin className="w-4 h-4 text-amber-500 shrink-0" /> Lagos, Nigeria</li>
-              <li className="flex items-center gap-3"><Phone className="w-4 h-4 text-amber-500 shrink-0" /> +234 800 000 0000</li>
-              <li className="flex items-center gap-3"><Mail className="w-4 h-4 text-amber-500 shrink-0" /> info@racochild.org</li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-1" />
+                <span>Mission Control Tower, Light City, Itawo, Itamapako, Ijebu Ode LGA, Ogun State</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-amber-500 shrink-0" />
+                <span>+234 802 262 8461 / 09060562048</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-amber-500 shrink-0" />
+                <span>info@racochildinitiative.org</span>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-slate-900 pt-6 text-center text-xs">
+        <div className="border-t border-slate-900 pt-6 text-center text-xs text-slate-500">
           <p>&copy; {new Date().getFullYear()} RACO Child Orphanage & School. All rights reserved.</p>
         </div>
       </div>
