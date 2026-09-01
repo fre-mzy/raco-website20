@@ -7,13 +7,12 @@ import {
   Briefcase, 
   Users, 
   Stethoscope, 
-  Calendar, 
   MapPin, 
   Phone, 
   ArrowRight, 
   Sparkles, 
-  CheckCircle2,
-  MessageCircle
+  MessageCircle,
+  AlertCircle
 } from 'lucide-react';
 
 export default function Home() {
@@ -43,11 +42,49 @@ export default function Home() {
                 <Heart className="w-4 h-4 fill-slate-950" /> Support Our Mission
               </Link>
               <Link
-                href="/programs"
+                href="/campaigns"
                 className="bg-slate-800 hover:bg-slate-700 text-white font-bold px-8 py-4 rounded-xl text-sm transition border border-slate-700 flex items-center gap-2"
               >
-                Explore Programs <ArrowRight className="w-4 h-4" />
+                View Urgent Campaigns <ArrowRight className="w-4 h-4" />
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* URGENT CAMPAIGNS HOMEPAGE SUMMARY BANNER */}
+        <section className="py-12 bg-amber-500/10 border-b border-amber-500/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white p-8 rounded-3xl border border-amber-500/30 shadow-md flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500 text-slate-950 flex-shrink-0 flex items-center justify-center font-black shadow-md">
+                  <AlertCircle className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-extrabold text-amber-600 uppercase tracking-widest bg-amber-50 px-2.5 py-1 rounded-full border border-amber-500/20">
+                    Active Appeal • ₦14,000,000 Target
+                  </span>
+                  <h3 className="text-xl font-extrabold text-slate-900 mt-2 mb-1">
+                    Back-to-School Support & Material Fund
+                  </h3>
+                  <p className="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed">
+                    We are currently raising funds for tuition, textbooks, uniforms, and daily school meals for hundreds of our orphaned children. See our detailed campaign breakdown and support today.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 w-full lg:w-auto">
+                <Link
+                  href="/campaigns"
+                  className="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition text-center"
+                >
+                  View Campaign Details
+                </Link>
+                <Link
+                  href="/donate"
+                  className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition text-center flex items-center justify-center gap-1.5"
+                >
+                  <Heart className="w-3.5 h-3.5 fill-slate-950" /> Donate Now
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -281,17 +318,4 @@ export default function Home() {
                   href="https://wa.me/2349060562048" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex items-center gap-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 px-5 py-3 rounded-xl transition shadow"
-                >
-                  <MessageCircle className="w-4 h-4 fill-current" /> WhatsApp (+234 906 056 2048)
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  );
-            }
+                  className="flex items-center gap-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-50
