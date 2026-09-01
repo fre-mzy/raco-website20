@@ -1,5 +1,5 @@
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import Link from 'next/link';
 import { 
   Heart, 
@@ -314,8 +314,21 @@ export default function Home() {
                 <a href="tel:08022628461" className="flex items-center gap-2 text-xs font-bold text-amber-400 bg-slate-900 px-4 py-3 rounded-xl border border-slate-700">
                   <Phone className="w-4 h-4" /> 0802 262 8461
                 </a>
-                <a 
+                 <a 
                   href="https://wa.me/2349060562048" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="flex items-center gap-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-50
+                  className="flex items-center gap-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 px-5 py-3 rounded-xl transition shadow"
+                >
+                  <MessageCircle className="w-4 h-4 fill-current" /> WhatsApp (+234 906 056 2048)
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
