@@ -61,7 +61,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-[10px] font-extrabold text-amber-600 uppercase tracking-widest bg-amber-50 px-2.5 py-1 rounded-full border border-amber-500/20">
-                    Active Appeal • ₦14,000,000 Target
+                    Active Appeal • ₦27,000,000 Target
                   </span>
                   <h3 className="text-xl font-extrabold text-slate-900 mt-2 mb-1">
                     Back-to-School Support & Material Fund
