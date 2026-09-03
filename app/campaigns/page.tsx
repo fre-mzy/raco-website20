@@ -53,7 +53,7 @@ export default function CampaignsPage() {
                 <div className="space-y-2 mb-8 bg-slate-50 p-4 rounded-2xl border border-slate-100">
                   <div className="flex justify-between text-xs font-bold">
                     <span className="text-slate-700">Target Goal</span>
-                    <span className="text-amber-600">₦14,000,000</span>
+                    <span className="text-amber-600">₦27,000,000</span>
                   </div>
                   <div className="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
                     <div className="bg-amber-500 h-full rounded-full w-1/3"></div>
