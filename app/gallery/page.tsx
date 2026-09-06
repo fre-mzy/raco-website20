@@ -8,7 +8,6 @@ import { ShieldAlert, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
   { src: "/Slide/IMG_20251113_073847~2.jpg", title: "RACO Community Outreach Moment 1" },
-  { src: "/Slide/IMG_20251115_143140.jpg", title: "Outreach & Support Activity" },
   { src: "/Slide/IMG_20251115_150221~2.jpg", title: "Field Program Snapshot" },
   { src: "/Slide/IMG_20251116_162956.jpg", title: "Community Engagement Activity" },
   { src: "/Slide/IMG_20251116_163632.jpg", title: "Welfare Distribution Program" },
@@ -26,21 +25,18 @@ const galleryImages = [
   { src: "/Slide/IMG_20251213_083053.jpg", title: "Educational Support Activity" },
   { src: "/Slide/IMG_20251213_092640.jpg", title: "Scholars & Student Snapshot" },
   { src: "/Slide/IMG_20251219_125603.jpg", title: "Support for the Aged Ministry" },
-  { src: "/Slide/IMG_20251219_125752.jpg", title: "Elderly Care & Welfare" },
-  { src: "/Slide/IMG_20251219_125823.jpg", title: "Senior Citizens Outreach" },
-  { src: "/Slide/IMG_20251223_112730.jpg", title: "Widows Empowerment Session" },
-  { src: "/Slide/IMG_20251223_114313_1.jpg", title: "Rural Women Program" },
-  { src: "/Slide/IMG_20251223_122804.jpg", title: "Empowerment Tool Grant" },
-  { src: "/Slide/IMG_20251223_123121.jpg", title: "Vocational Training Moment" },
-  { src: "/Slide/IMG_20251223_123608.jpg", title: "Economic Support Program" },
-  { src: "/Slide/IMG_20251223_123639.jpg", title: "Widows & Mothers Initiative" },
-  { src: "/Slide/IMG_20251223_134851.jpg", title: "Festive Outreach Activity" },
-  { src: "/Slide/IMG_20251223_135016.jpg", title: "Community Celebration Moment" },
+  { src: "/Slide/IMG_20251219_125823.jpg", title: "Angel (from year 0 to 4+)" },
+  { src: "/Slide/IMG_20251223_112730.jpg", title: "Mrs Daniel Elizabeth (ES)" },
+  { src: "/Slide/IMG_20251223_114313_1.jpg", title: "" },
+  { src: "/Slide/IMG_20251223_123121.jpg", title: "Media Team" },
+  { src: "/Slide/IMG_20251223_123608.jpg", title: "Cultural Exchange" },
+  { src: "/Slide/IMG_20251223_123639.jpg", title: "" },
+  { src: "/Slide/IMG_20251223_134851.jpg", title: "Mr Stephen" },
+  { src: "/Slide/IMG_20251223_135016.jpg", title: "" },
   { src: "/Slide/IMG_20251223_135034.jpg", title: "End of Year Outreach" },
   { src: "/Slide/IMG_20260612_181116.jpg", title: "Mid-Year Community Outreach" },
   { src: "/Slide/IMG_20260613_122541.jpg", title: "Field Monitoring & Support" },
-  { src: "/Slide/IMG_20260627_204642.jpg", title: "Rural Development Project" },
-  { src: "/Slide/IMG_20260801_093213.jpg", title: "RACO Child Initiative Impact" }
+  { src: "/Slide/IMG_20260801_093213.jpg", title: "Gate View" }
 ];
 
 export default function GalleryPage() {
