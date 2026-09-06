@@ -2,12 +2,13 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   GraduationCap, 
   Briefcase, 
   Users, 
   Stethoscope, 
-  HeartHandshake, 
+  Heart,
   ShieldCheck, 
   ArrowRight,
   Sparkles
@@ -37,7 +38,7 @@ export default function Programs() {
         {/* PROGRAMS DETAILED SECTIONS */}
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           
-          {/* Program 1: RACO Orphanage School */}
+          {/* Program 1: RACO Orphanage School (With Image) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
@@ -62,15 +63,25 @@ export default function Programs() {
                 </li>
               </ul>
             </div>
-            <div className="bg-slate-200 rounded-3xl h-80 sm:h-96 flex items-center justify-center text-slate-500 font-bold border border-slate-300">
-              [ School & Classroom Photo Placeholder ]
+            <div className="relative h-80 sm:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-inner border border-slate-300">
+              <Image 
+                src="/programme/IMG_20251219_125537.jpg" 
+                alt="School children" 
+                fill 
+                className="object-cover"
+              />
             </div>
           </div>
 
-          {/* Program 2: Rural Widows Empowerment */}
+          {/* Program 2: Rural Widows Empowerment (With Image) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-200 rounded-3xl h-80 sm:h-96 flex items-center justify-center text-slate-500 font-bold border border-slate-300 order-2 lg:order-1">
-              [ Widow Empowerment Photo Placeholder ]
+            <div className="relative h-80 sm:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-inner border border-slate-300 order-2 lg:order-1">
+              <Image 
+                src="/programme/IMG_20251219_125537.jpg" 
+                alt="Empowering rural women" 
+                fill 
+                className="object-cover"
+              />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
@@ -97,64 +108,89 @@ export default function Programs() {
             </div>
           </div>
 
-          {/* Program 3: Youth Vocational Training */}
+          {/* Program 3: Support for the Aged (With Image) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
-                <Users className="w-6 h-6" />
+                <Heart className="w-6 h-6" />
               </div>
               <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
                 Pillar 03
               </span>
-              <h2 className="text-3xl font-extrabold text-slate-900">Youth Skills & Vocational Workshops</h2>
+              <h2 className="text-3xl font-extrabold text-slate-900">Support for the Aged</h2>
               <p className="text-slate-600 leading-relaxed">
-                To combat youth unemployment and rural migration, we provide hands-on technical training in high-demand trades such as motorbike mechanics, electrical installation, plumbing, carpentry, shoe making, and modern agribusiness.
+                Extending love, regular food packages, access to essential medications, and general welfare support to vulnerable elderly members in rural communities so no senior citizen is left behind or forgotten.
               </p>
               <ul className="space-y-3 text-sm text-slate-700 font-medium">
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Technical Trades (Electrical, Plumbing, Carpentry)
+                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Regular food and welfare packages
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Agribusiness & Modern Farming
+                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Access to routine elderly healthcare support
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Tool grants upon completion
+                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Special care and companionship
                 </li>
               </ul>
             </div>
-            <div className="bg-slate-200 rounded-3xl h-80 sm:h-96 flex items-center justify-center text-slate-500 font-bold border border-slate-300">
-              [ Youth Training Photo Placeholder ]
+            <div className="relative h-80 sm:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-inner border border-slate-300">
+              <Image 
+                src="/programme/IMG_20251219_125537.jpg" 
+                alt="Support for aged" 
+                fill 
+                className="object-cover"
+              />
             </div>
           </div>
 
-          {/* Program 4: RACO Life Centre Clinic */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-200 rounded-3xl h-80 sm:h-96 flex items-center justify-center text-slate-500 font-bold border border-slate-300 order-2 lg:order-1">
-              [ Medical Outreach Photo Placeholder ]
+          {/* Program 4: Youth Vocational Training (Without Image) */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 sm:p-12">
+            <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+              <Users className="w-6 h-6" />
             </div>
-            <div className="space-y-6 order-1 lg:order-2">
-              <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
-                <Stethoscope className="w-6 h-6" />
-              </div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
-                Pillar 04
-              </span>
-              <h2 className="text-3xl font-extrabold text-slate-900">Free Medical Outreach & Clinic</h2>
-              <p className="text-slate-600 leading-relaxed">
-                Access to basic healthcare is a major challenge in rural settlements. The RACO Life Centre clinic provides ongoing free medical consultations, essential malaria and infection treatments, deworming campaigns for children, and periodic full-scale community health outreaches.
-              </p>
-              <ul className="space-y-3 text-sm text-slate-700 font-medium">
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Free Medical Consultations & Screenings
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Essential Drug & Medication Distribution
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Special care and welfare for rural elderly citizens
-                </li>
-              </ul>
+            <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
+              Pillar 04
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-3">Youth Skills & Vocational Workshops</h2>
+            <p className="text-slate-600 leading-relaxed max-w-3xl mb-6">
+              To combat youth unemployment and rural migration, we provide hands-on technical training in high-demand trades such as motorbike mechanics, electrical installation, plumbing, carpentry, shoe making, and modern agribusiness.
+            </p>
+            <ul className="space-y-3 text-sm text-slate-700 font-medium">
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-amber-500"></span> Technical Trades (Electrical, Plumbing, Carpentry)
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-amber-500"></span> Agribusiness & Modern Farming
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-amber-500"></span> Tool grants upon completion
+              </li>
+            </ul>
+          </div>
+
+          {/* Program 5: RACO Life Centre Clinic (Without Image) */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 sm:p-12">
+            <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+              <Stethoscope className="w-6 h-6" />
             </div>
+            <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
+              Pillar 05
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-3">Free Medical Outreach & Clinic</h2>
+            <p className="text-slate-600 leading-relaxed max-w-3xl mb-6">
+              Access to basic healthcare is a major challenge in rural settlements. The RACO Life Centre clinic provides ongoing free medical consultations, essential malaria and infection treatments, deworming campaigns for children, and periodic full-scale community health outreaches.
+            </p>
+            <ul className="space-y-3 text-sm text-slate-700 font-medium">
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-amber-500"></span> Free Medical Consultations & Screenings
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-amber-500"></span> Essential Drug & Medication Distribution
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-amber-500"></span> Special care and welfare for rural elderly citizens
+              </li>
+            </ul>
           </div>
 
         </section>
@@ -179,5 +215,4 @@ export default function Programs() {
       <Footer />
     </div>
   );
-                  }
-                
+}
