@@ -115,13 +115,10 @@ export default function Donate() {
                   Support our 34 undergraduates and JAMB scholars through university tuition, housing, and stipends.
                 </p>
                 <div className="mt-6 space-y-2">
-                  <div className="flex justify-between items-center text-xs font-semibold py-2 border-b border-slate-100">
-                    <span className="text-slate-500">JAMB Prep & Exam Fee</span>
-                    <span className="text-slate-900 font-bold">₦15,000</span>
-                  </div>
+          
                   <div className="flex justify-between items-center text-xs font-semibold py-2">
                     <span className="text-slate-500">Annual University Sponsorship</span>
-                    <span className="text-amber-600 font-extrabold text-base">₦150,000+</span>
+                    <span className="text-amber-600 font-extrabold text-base">₦350,000+</span>
                   </div>
                 </div>
               </div>
