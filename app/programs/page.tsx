@@ -9,7 +9,6 @@ import {
   Users, 
   Stethoscope, 
   Heart,
-  ShieldCheck, 
   ArrowRight,
   Sparkles
 } from 'lucide-react';
@@ -38,7 +37,7 @@ export default function Programs() {
         {/* PROGRAMS DETAILED SECTIONS */}
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           
-          {/* Program 1: RACO Orphanage School (With Image) */}
+          {/* Program 1: RACO Orphanage School */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
@@ -65,7 +64,7 @@ export default function Programs() {
             </div>
             <div className="relative h-80 sm:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-inner border border-slate-300">
               <Image 
-                src="/programme/IMG_20251219_125537.jpg" 
+                src="/programme/IMG_20251208_073637~3.jpg" 
                 alt="School children" 
                 fill 
                 className="object-cover"
@@ -73,11 +72,11 @@ export default function Programs() {
             </div>
           </div>
 
-          {/* Program 2: Rural Widows Empowerment (With Image) */}
+          {/* Program 2: Rural Widows Empowerment */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 sm:h-96 bg-slate-200 rounded-3xl overflow-hidden shadow-inner border border-slate-300 order-2 lg:order-1">
               <Image 
-                src="/programme/IMG_20251219_125537.jpg" 
+                src="/programme/IMG_20251223_121541.jpg" 
                 alt="Empowering rural women" 
                 fill 
                 className="object-cover"
@@ -108,7 +107,7 @@ export default function Programs() {
             </div>
           </div>
 
-          {/* Program 3: Support for the Aged (With Image) */}
+          {/* Program 3: Support for the Aged */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
