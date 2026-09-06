@@ -1,31 +1,46 @@
 'use client';
 
 import { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import Image from 'next/image';
 import { ShieldAlert, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
-  { src: "/programme/IMG_20251208_073637~3.jpg", title: "RACO Orphanage School Children" },
-  { src: "/programme/IMG_20251223_121541.jpg", title: "Rural Women & Widows Initiative" },
-  { src: "/programme/IMG_20251219_125537.jpg", title: "Support for the Aged Ministry" },
-  { src: "/programme/IMG_20251128_123425.jpg", title: "Community Outreach Moment" },
-  { src: "/programme/IMG_20251113_073902.jpg", title: "RACO Impact Activity" },
-  { src: "/programme/IMG_20251115_150221.jpg", title: "Field Program Snapshot" },
-  { src: "/programme/IMG_20260801_093213.jpg", title: "Child Support & Care" },
-  { src: "/programme/IMG_20260627_204642.jpg", title: "Rural Development Project" },
-  { src: "/programme/IMG_20260613_122602.jpg", title: "Welfare Outreach" },
-  { src: "/programme/IMG_20260612_181126.jpg", title: "Community Engagement" },
-  { src: "/programme/IMG_20251225_143718.jpg", title: "Christmas & Festive Outreach" },
-  { src: "/programme/IMG_20251223_134857.jpg", title: "Empowerment Session" },
-  { src: "/programme/IMG_20251223_135016.jpg", title: "Widows & Youth Program" },
-  { src: "/programme/IMG_20251223_123117_1.jpg", title: "Outreach & Support" },
-  { src: "/programme/IMG_20251223_123318.jpg", title: "Care & Welfare Program" },
-  { src: "/programme/IMG_20251212_130605.jpg", title: "School & Community Activity" },
-  { src: "/programme/IMG_20251206_101701.jpg", title: "Field Ministry Snapshot" },
-  { src: "/programme/IMG_20251202_123044.jpg", title: "Support Program" },
-  { src: "/programme/IMG_20251202_123023.jpg", title: "Community Welfare" }
+  { src: "/Slide/IMG_20251113_073847~2.jpg", title: "RACO Community Outreach Moment 1" },
+  { src: "/Slide/IMG_20251115_143140.jpg", title: "Outreach & Support Activity" },
+  { src: "/Slide/IMG_20251115_150221~2.jpg", title: "Field Program Snapshot" },
+  { src: "/Slide/IMG_20251116_162956.jpg", title: "Community Engagement Activity" },
+  { src: "/Slide/IMG_20251116_163632.jpg", title: "Welfare Distribution Program" },
+  { src: "/Slide/IMG_20251116_174431.jpg", title: "Rural Development Session" },
+  { src: "/Slide/IMG_20251116_174532~2.jpg", title: "Support Program Snapshot" },
+  { src: "/Slide/IMG_20251116_180838.jpg", title: "Empowerment Initiative Moment" },
+  { src: "/Slide/IMG_20251128_121422.jpg", title: "School & Community Activity" },
+  { src: "/Slide/IMG_20251128_123422.jpg", title: "RACO Impact Snapshot" },
+  { src: "/Slide/IMG_20251202_123011.jpg", title: "Child Care & Support" },
+  { src: "/Slide/IMG_20251202_123023.jpg", title: "Community Welfare Program" },
+  { src: "/Slide/IMG_20251207_175006.jpg", title: "Outreach Program Moment" },
+  { src: "/Slide/IMG_20251208_073637~3.jpg", title: "RACO Orphanage School Children" },
+  { src: "/Slide/IMG_20251212_130551.jpg", title: "Field Visit & Support" },
+  { src: "/Slide/IMG_20251212_131717.jpg", title: "Community Welfare Action" },
+  { src: "/Slide/IMG_20251213_083053.jpg", title: "Educational Support Activity" },
+  { src: "/Slide/IMG_20251213_092640.jpg", title: "Scholars & Student Snapshot" },
+  { src: "/Slide/IMG_20251219_125603.jpg", title: "Support for the Aged Ministry" },
+  { src: "/Slide/IMG_20251219_125752.jpg", title: "Elderly Care & Welfare" },
+  { src: "/Slide/IMG_20251219_125823.jpg", title: "Senior Citizens Outreach" },
+  { src: "/Slide/IMG_20251223_112730.jpg", title: "Widows Empowerment Session" },
+  { src: "/Slide/IMG_20251223_114313_1.jpg", title: "Rural Women Program" },
+  { src: "/Slide/IMG_20251223_122804.jpg", title: "Empowerment Tool Grant" },
+  { src: "/Slide/IMG_20251223_123121.jpg", title: "Vocational Training Moment" },
+  { src: "/Slide/IMG_20251223_123608.jpg", title: "Economic Support Program" },
+  { src: "/Slide/IMG_20251223_123639.jpg", title: "Widows & Mothers Initiative" },
+  { src: "/Slide/IMG_20251223_134851.jpg", title: "Festive Outreach Activity" },
+  { src: "/Slide/IMG_20251223_135016.jpg", title: "Community Celebration Moment" },
+  { src: "/Slide/IMG_20251223_135034.jpg", title: "End of Year Outreach" },
+  { src: "/Slide/IMG_20260612_181116.jpg", title: "Mid-Year Community Outreach" },
+  { src: "/Slide/IMG_20260613_122541.jpg", title: "Field Monitoring & Support" },
+  { src: "/Slide/IMG_20260627_204642.jpg", title: "Rural Development Project" },
+  { src: "/Slide/IMG_20260801_093213.jpg", title: "RACO Child Initiative Impact" }
 ];
 
 export default function GalleryPage() {
@@ -132,4 +147,4 @@ export default function GalleryPage() {
       <Footer />
     </div>
   );
-    }
+}
