@@ -14,6 +14,16 @@ import {
   MessageCircle,
   AlertCircle
 } from 'lucide-react';
+import type { Metadata } from "next";
+
+// Google Search Console Canonical Metadata
+export const metadata: Metadata = {
+  title: "RACO Child Orphanage & School",
+  description: "Faith-Based Care & Protection Center",
+  alternates: {
+    canonical: "https://racochildinitiative.org/",
+  },
+};
 
 export default function Home() {
   return (
