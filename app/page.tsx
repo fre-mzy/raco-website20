@@ -17,11 +17,15 @@ import {
 import type { Metadata } from "next";
 
 // Google Search Console Canonical Metadata
+// Google Search Console Canonical Metadata
 export const metadata: Metadata = {
   title: "RACO Child Orphanage & School",
   description: "Faith-Based Care & Protection Center",
   alternates: {
     canonical: "https://racochildinitiative.org/",
+  },
+  verification: {
+    google: "DUk79X4tBkUQMnv6fFmbsbIlBQItszIrtSt2HQu53dE",
   },
 };
 
