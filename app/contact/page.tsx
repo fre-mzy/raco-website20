@@ -93,110 +93,152 @@ export default function Contact() {
           </div>
 
           {/* COMMUNICATION CHANNELS */}
-          <div className="contact-card contact-card-dark bg-slate-900 text-white p-8 rounded-3xl shadow-xl flex flex-col justify-between">
+<div className="contact-card contact-card-dark bg-slate-900 text-white p-8 rounded-3xl shadow-xl flex flex-col justify-between">
 
-            <div>
-              <h3 className="font-bold text-lg text-amber-400 mb-6 flex items-center gap-2">
-                <Phone className="w-5 h-5" />
-                Direct Support Lines
-              </h3>
+  <div>
 
-              <div className="space-y-4 text-sm">
+    <div className="mb-7">
+      <span className="text-amber-400 text-[10px] font-bold uppercase tracking-wider">
+        Get In Touch
+      </span>
 
-                {/* WhatsApp */}
-                <a
-                  href="https://wa.me/2347080004902"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-line flex items-center justify-between gap-3 group"
-                >
-                  <span className="flex items-center gap-2 text-slate-300">
-                    <MessageCircle className="w-4 h-4 text-emerald-400" />
-                    Official WhatsApp
-                  </span>
+      <h3 className="font-extrabold text-2xl text-white mt-2">
+        Contact RACO
+      </h3>
 
-                  <span className="text-emerald-400 font-bold group-hover:text-emerald-300 transition-colors">
-                    0708 000 4902
-                  </span>
-                </a>
+      <p className="text-slate-400 text-xs leading-relaxed mt-2">
+        Reach us directly through WhatsApp or any of our official
+        telephone hotlines.
+      </p>
+    </div>
 
-                {/* Hotline 1 */}
-                <a
-                  href="tel:08022628461"
-                  className="contact-line flex items-center justify-between gap-3 group"
-                >
-                  <span className="flex items-center gap-2 text-slate-300">
-                    <Phone className="w-4 h-4 text-amber-400" />
-                    Hotline 1 (ES)
-                  </span>
+    <div className="space-y-3">
 
-                  <span className="text-amber-400 font-bold group-hover:text-amber-300 transition-colors">
-                    0802 262 8461
-                  </span>
-                </a>
+      {/* WhatsApp */}
+      <a
+        href="https://wa.me/2347080004902"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-line flex items-center justify-between gap-3 group bg-white/5 border border-white/10 rounded-xl px-4 py-3.5"
+      >
+        <span className="flex items-center gap-3">
+          <span className="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+            <MessageCircle className="w-4 h-4 text-emerald-400" />
+          </span>
 
-                {/* Hotline 2 */}
-                <a
-                  href="tel:09060562048"
-                  className="contact-line flex items-center justify-between gap-3 group"
-                >
-                  <span className="flex items-center gap-2 text-slate-300">
-                    <Phone className="w-4 h-4 text-amber-400" />
-                    Hotline 2
-                  </span>
+          <span className="flex flex-col">
+            <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">
+              Official WhatsApp
+            </span>
 
-                  <span className="text-amber-400 font-bold group-hover:text-amber-300 transition-colors">
-                    0906 056 2048
-                  </span>
-                </a>
+            <span className="text-sm text-slate-200 font-semibold">
+              0708 000 4902
+            </span>
+          </span>
+        </span>
 
-                {/* Hotline 3 */}
-                <a
-                  href="tel:08026994164"
-                  className="contact-line flex items-center justify-between gap-3 group"
-                >
-                  <span className="flex items-center gap-2 text-slate-300">
-                    <Phone className="w-4 h-4 text-amber-400" />
-                    Hotline 3
-                  </span>
+        <span className="text-emerald-400 text-xs font-bold group-hover:translate-x-1 transition-transform">
+          Chat →
+        </span>
+      </a>
 
-                  <span className="text-amber-400 font-bold group-hover:text-amber-300 transition-colors">
-                    0802 699 4164
-                  </span>
-                </a>
+      {/* Hotline 1 */}
+      <a
+        href="tel:08022628461"
+        className="contact-line flex items-center justify-between gap-3 group bg-white/5 border border-white/10 rounded-xl px-4 py-3.5"
+      >
+        <span className="flex items-center gap-3">
+          <span className="w-9 h-9 rounded-lg bg-amber-500/10 flex items-center justify-center">
+            <Phone className="w-4 h-4 text-amber-400" />
+          </span>
 
-              </div>
+          <span className="flex flex-col">
+            <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">
+              Hotline 1 (ES)
+            </span>
 
-              <div className="mt-6 pt-5 border-t border-white/10">
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  Call any of our hotlines for enquiries, partnerships,
-                  support, visits, and other RACO-related matters.
-                </p>
-              </div>
+            <span className="text-sm text-slate-200 font-semibold">
+              0802 262 8461
+            </span>
+          </span>
+        </span>
 
-              {/* FACEBOOK */}
-              <div className="flex items-center gap-3 mt-5">
-                <Facebook className="w-4 h-4 text-amber-400" />
+        <Phone className="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors" />
+      </a>
 
-                <span className="text-xs text-slate-400">
-                  Connect with RACO on Facebook
-                </span>
-              </div>
-            </div>
+      {/* Hotline 2 */}
+      <a
+        href="tel:09060562048"
+        className="contact-line flex items-center justify-between gap-3 group bg-white/5 border border-white/10 rounded-xl px-4 py-3.5"
+      >
+        <span className="flex items-center gap-3">
+          <span className="w-9 h-9 rounded-lg bg-amber-500/10 flex items-center justify-center">
+            <Phone className="w-4 h-4 text-amber-400" />
+          </span>
 
-            {/* WHATSAPP BUTTON */}
-            <a
-              href="https://wa.me/2347080004902"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-whatsapp mt-8 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm shadow-md"
-            >
-              <MessageCircle className="w-5 h-5 fill-current" />
-              Chat With Us on WhatsApp
-            </a>
+          <span className="flex flex-col">
+            <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">
+              Hotline 2
+            </span>
 
-          </div>
-        </div>
+            <span className="text-sm text-slate-200 font-semibold">
+              0906 056 2048
+            </span>
+          </span>
+        </span>
+
+        <Phone className="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors" />
+      </a>
+
+      {/* Hotline 3 */}
+      <a
+        href="tel:08026994164"
+        className="contact-line flex items-center justify-between gap-3 group bg-white/5 border border-white/10 rounded-xl px-4 py-3.5"
+      >
+        <span className="flex items-center gap-3">
+          <span className="w-9 h-9 rounded-lg bg-amber-500/10 flex items-center justify-center">
+            <Phone className="w-4 h-4 text-amber-400" />
+          </span>
+
+          <span className="flex flex-col">
+            <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">
+              Hotline 3
+            </span>
+
+            <span className="text-sm text-slate-200 font-semibold">
+              0802 699 4164
+            </span>
+          </span>
+        </span>
+
+        <Phone className="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors" />
+      </a>
+
+    </div>
+
+    {/* FACEBOOK */}
+    <div className="flex items-center gap-3 mt-6 pt-5 border-t border-white/10">
+      <Facebook className="w-4 h-4 text-amber-400" />
+
+      <span className="text-xs text-slate-400">
+        Connect with RACO on Facebook
+      </span>
+    </div>
+
+  </div>
+
+  {/* WHATSAPP BUTTON */}
+  <a
+    href="https://wa.me/2347080004902"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-whatsapp mt-8 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm shadow-md"
+  >
+    <MessageCircle className="w-5 h-5 fill-current" />
+    Chat With Us on WhatsApp
+  </a>
+
+</div>
 
         {/* LOCATION INFORMATION */}
         <div className="contact-location-card bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm mb-16">
