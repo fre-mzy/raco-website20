@@ -1,181 +1,374 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Heart, Menu, X, MessageCircle, Facebook } from 'lucide-react';
+import {
+  Heart,
+  Menu,
+  X,
+  MessageCircle,
+  Facebook,
+} from 'lucide-react';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About & Trustees', href: '/about' },
+  { name: 'Programs', href: '/programs' },
+  { name: 'University Scholars', href: '/university-scholars' },
+  { name: 'Gallery & Videos', href: '/gallery' },
+  { name: 'Contact', href: '/contact' },
+];
+
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const reduceMotion = useReducedMotion();
 
-  // Scroll handler for subtle navbar transformation
+  /* --------------------------------
+     NAVBAR SCROLL STATE
+  -------------------------------- */
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      setScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  /* --------------------------------
+     CLOSE MOBILE MENU ON ROUTE CHANGE
+  -------------------------------- */
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  /* --------------------------------
+     PREVENT BODY SCROLL WHEN MENU OPEN
+  -------------------------------- */
+
+  useEffect(() => {
+    if (!isOpen) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  /* --------------------------------
+     ESC KEY CLOSE
+  -------------------------------- */
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About & Trustees', href: '/about' },
-    { name: 'Programs', href: '/programs' },
-    { name: 'University Scholars', href: '/students' },
-    { name: 'Gallery & Videos', href: '/gallery' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
   return (
-    <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-xl py-3'
-          : 'bg-slate-900 py-4 border-b border-slate-800/60'
-      } text-white`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          
-          {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="bg-amber-500 p-2.5 rounded-xl text-slate-950 transition-transform group-hover:scale-105">
-              <Heart className="w-6 h-6 fill-current" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-black text-xl tracking-tight leading-none">
-                RACO <span className="text-amber-500">Child</span>
-              </span>
-              <span className="text-[10px] text-slate-400 font-medium tracking-widest uppercase mt-0.5">
-                Orphanage & School
-              </span>
-            </div>
-          </Link>
+    <>
+      <nav
+        className={`
+          fixed top-0 left-0 right-0 z-50
+          transition-all duration-500 ease-out
+          ${
+            scrolled
+              ? 'bg-white/95 backdrop-blur-md shadow-md py-3'
+              : 'bg-white/90 backdrop-blur-sm py-5'
+          }
+        `}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-4 font-medium text-slate-300 text-sm">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`px-3 py-1.5 rounded-lg transition-all ${
-                    isActive
-                      ? 'text-amber-400 bg-slate-800/90 font-semibold shadow-sm'
-                      : 'hover:text-amber-400 hover:bg-slate-800/40'
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-
-            {/* Social & Direct Contact Buttons */}
-            <div className="flex items-center gap-3 pl-3 border-l border-slate-800">
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="text-slate-400 hover:text-amber-400 transition p-1.5 rounded-lg hover:bg-slate-800"
-                aria-label="Facebook Page"
+            {/* LOGO */}
+            <Link
+              href="/"
+              className="group flex items-center gap-3"
+              onClick={() => setIsOpen(false)}
+            >
+              <div
+                className="
+                  flex h-11 w-11 items-center justify-center
+                  rounded-full bg-amber-500
+                  transition-transform duration-300
+                  group-hover:scale-105
+                  group-active:scale-95
+                "
               >
-                <Facebook className="w-4 h-4" />
+                <Heart
+                  className="h-6 w-6 text-white"
+                  fill="currentColor"
+                />
+              </div>
+
+              <div className="hidden sm:block">
+                <p className="font-bold leading-tight text-slate-900">
+                  RACO
+                </p>
+
+                <p className="text-xs text-slate-500">
+                  Child Orphanage & School
+                </p>
+              </div>
+            </Link>
+
+            {/* DESKTOP NAVIGATION */}
+            <div className="hidden lg:flex items-center gap-1">
+              {navLinks.map((link) => {
+                const isActive =
+                  pathname === link.href ||
+                  (link.href !== '/' &&
+                    pathname.startsWith(link.href));
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`
+                      group relative px-4 py-2
+                      text-sm font-medium
+                      transition-colors duration-300
+                      ${
+                        isActive
+                          ? 'text-amber-600'
+                          : 'text-slate-700 hover:text-amber-600'
+                      }
+                    `}
+                  >
+                    {link.name}
+
+                    {/* Animated underline */}
+                    <span
+                      className={`
+                        absolute bottom-0 left-4 right-4 h-0.5
+                        origin-left rounded-full bg-amber-500
+                        transition-transform duration-300
+                        ease-out
+                        ${
+                          isActive
+                            ? 'scale-x-100'
+                            : 'scale-x-0 group-hover:scale-x-100'
+                        }
+                      `}
+                    />
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* DESKTOP ACTIONS */}
+            <div className="hidden lg:flex items-center gap-3">
+
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="
+                  rounded-full p-2
+                  text-slate-600
+                  transition-all duration-300
+                  hover:bg-slate-100
+                  hover:-translate-y-0.5
+                  hover:text-blue-600
+                "
+              >
+                <Facebook className="h-5 w-5" />
               </a>
 
-              <a 
-                href="https://wa.me/2348022628461" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 text-xs font-bold active:scale-95 shadow-sm"
+              <a
+                href="https://wa.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="
+                  rounded-full p-2
+                  text-slate-600
+                  transition-all duration-300
+                  hover:bg-slate-100
+                  hover:-translate-y-0.5
+                  hover:text-green-600
+                "
               >
-                <MessageCircle className="w-4 h-4 fill-current" /> WhatsApp
+                <MessageCircle className="h-5 w-5" />
               </a>
 
               <Link
                 href="/donate"
-                className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs transition-all shadow-lg shadow-amber-500/20 active:scale-95"
+                className="
+                  cta-button
+                  inline-flex items-center gap-2
+                  rounded-full
+                  bg-amber-500
+                  px-5 py-2.5
+                  text-sm font-semibold
+                  text-white
+                  shadow-sm
+                  hover:bg-amber-600
+                  hover:shadow-md
+                "
               >
+                <Heart
+                  className="h-4 w-4"
+                  fill="currentColor"
+                />
+
+                Donate
+              </Link>
+            </div>
+
+            {/* MOBILE MENU BUTTON */}
+            <button
+              type="button"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="
+                lg:hidden
+                rounded-xl p-2
+                text-slate-800
+                transition-all duration-300
+                hover:bg-slate-100
+                active:scale-95
+              "
+            >
+              <span
+                className={`
+                  block transition-transform duration-300
+                  ${isOpen ? 'rotate-90' : 'rotate-0'}
+                `}
+              >
+                {isOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </span>
+            </button>
+          </div>
+        </div>
+
+        {/* MOBILE MENU */}
+        <div
+          className={`
+            lg:hidden overflow-hidden
+            border-t border-slate-100
+            bg-white
+            transition-all duration-500
+            ease-out
+            ${
+              isOpen
+                ? 'max-h-[calc(100vh-80px)] opacity-100'
+                : 'max-h-0 opacity-0'
+            }
+          `}
+        >
+          <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6">
+
+            <div className="flex flex-col gap-1">
+              {navLinks.map((link, index) => {
+                const isActive =
+                  pathname === link.href ||
+                  (link.href !== '/' &&
+                    pathname.startsWith(link.href));
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`
+                      rounded-xl px-4 py-3
+                      text-base font-medium
+                      transition-all duration-300
+                      ${
+                        isOpen
+                          ? 'translate-x-0 opacity-100'
+                          : '-translate-x-4 opacity-0'
+                      }
+                      ${
+                        isActive
+                          ? 'bg-amber-50 text-amber-600'
+                          : 'text-slate-700 hover:bg-slate-50 hover:text-amber-600'
+                      }
+                    `}
+                    style={{
+                      transitionDelay: reduceMotion
+                        ? '0ms'
+                        : `${index * 50}ms`,
+                    }}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </div>
+
+            <div
+              className={`
+                mt-4 border-t border-slate-100 pt-4
+                transition-all duration-500
+                ${
+                  isOpen
+                    ? 'translate-y-0 opacity-100'
+                    : 'translate-y-3 opacity-0'
+                }
+              `}
+            >
+              <Link
+                href="/donate"
+                onClick={() => setIsOpen(false)}
+                className="
+                  cta-button
+                  flex w-full
+                  items-center justify-center gap-2
+                  rounded-xl
+                  bg-amber-500
+                  px-5 py-3
+                  font-semibold
+                  text-white
+                  shadow-sm
+                  hover:bg-amber-600
+                  hover:shadow-md
+                "
+              >
+                <Heart
+                  className="h-5 w-5"
+                  fill="currentColor"
+                />
+
                 Donate
               </Link>
             </div>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-          </button>
         </div>
-      </div>
-
-      {/* Mobile Drawer */}
-      <div
-        className={`lg:hidden bg-slate-900 border-b border-slate-800 overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-[500px] py-4 opacity-100' : 'max-h-0 py-0 opacity-0'
-        }`}
-      >
-        <div className="px-4 space-y-2 font-medium text-sm">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2.5 rounded-lg transition-colors ${
-                  isActive
-                    ? 'text-amber-400 bg-slate-800 font-semibold'
-                    : 'text-slate-300 hover:text-amber-400 hover:bg-slate-800/50'
-                }`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-
-          <div className="pt-3 border-t border-slate-800 flex flex-col gap-2.5">
-            <div className="flex items-center gap-3">
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="flex-1 flex items-center justify-center gap-2 text-slate-300 bg-slate-800 hover:bg-slate-700 py-2.5 rounded-xl text-xs font-semibold transition"
-              >
-                <Facebook className="w-4 h-4 text-blue-400" /> Facebook
-              </a>
-              <a 
-                href="https://wa.me/2348022628461" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="flex-1 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-xs font-bold transition"
-              >
-                <MessageCircle className="w-4 h-4 fill-current" /> WhatsApp
-              </a>
-            </div>
-            <Link
-              href="/donate"
-              className="block text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl shadow-md transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Donate Now
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
-          }
-                  
+}
