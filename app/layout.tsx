@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+
 import './globals.css';
+import MotionProvider from '@/components/motion/MotionProvider';
 
 export const metadata: Metadata = {
   title: 'RACO Child Orphanage & School | Faith-Based Care & Empowerment',
@@ -14,8 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased bg-slate-50 text-slate-900 selection:bg-amber-500 selection:text-slate-950">
-        {children}
-      </body>
+  <MotionProvider />
+  {children}
+</body>
     </html>
   );
 }
