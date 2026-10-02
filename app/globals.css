@@ -101,3 +101,70 @@ a.bg-emerald-600:active,
     transition: none;
   }
 }
+
+/* =========================================
+   RACO HERO MOTION
+   ========================================= */
+
+.hero-item {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroEnter 800ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-item-1 {
+  animation-delay: 100ms;
+}
+
+.hero-item-2 {
+  animation-delay: 220ms;
+}
+
+.hero-item-3 {
+  animation-delay: 340ms;
+}
+
+.hero-item-4 {
+  animation-delay: 460ms;
+}
+
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle hero background movement */
+
+.hero-glow {
+  animation: heroGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+  from {
+    opacity: 0.7;
+    transform: translateX(-2%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(2%);
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-item,
+  .hero-glow {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
