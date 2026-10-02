@@ -402,3 +402,151 @@ a.bg-emerald-600:active,
     display: none;
   }
 }
+
+/* =========================================
+   RACO LOCATIONS MOTION
+   ========================================= */
+
+.location-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.motion-visible .location-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.location-heading:nth-child(1) {
+  transition-delay: 80ms;
+}
+
+.location-heading:nth-child(2) {
+  transition-delay: 160ms;
+}
+
+.location-heading:nth-child(3) {
+  transition-delay: 240ms;
+}
+
+/* Location cards */
+
+.location-card {
+  position: relative;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 750ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 750ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+.motion-visible .location-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.motion-visible .location-card:nth-child(1) {
+  transition-delay: 180ms;
+}
+
+.motion-visible .location-card:nth-child(2) {
+  transition-delay: 320ms;
+}
+
+.location-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(245, 158, 11, 0.08),
+      transparent 40%
+    );
+
+  opacity: 0;
+  transition: opacity 350ms ease;
+
+  pointer-events: none;
+}
+
+.location-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(245, 158, 11, 0.25);
+
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.08),
+    0 8px 18px rgba(15, 23, 42, 0.04);
+}
+
+.location-card:hover::before {
+  opacity: 1;
+}
+
+/* Location icon */
+
+.location-icon {
+  position: relative;
+  z-index: 1;
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.location-card:hover .location-icon {
+  transform: translateY(-3px) scale(1.06);
+
+  background-color: rgba(245, 158, 11, 0.16);
+
+  box-shadow:
+    0 10px 22px rgba(245, 158, 11, 0.12);
+}
+
+/* Divider */
+
+.location-divider {
+  transform-origin: left;
+  transform: scaleX(0);
+
+  transition:
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.motion-visible .location-divider {
+  transform: scaleX(1);
+  transition-delay: 500ms;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .location-heading,
+  .location-card,
+  .location-divider,
+  .location-icon {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+  .location-card:hover {
+    transform: none;
+    box-shadow: inherit;
+  }
+
+  .location-card::before {
+    display: none;
+  }
+}
