@@ -262,3 +262,143 @@ a.bg-emerald-600:active,
     display: none;
   }
 }
+
+/* =========================================
+   RACO ANNUAL EVENTS MOTION
+   ========================================= */
+
+.event-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: eventHeadingEnter 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.event-heading:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.event-heading:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+@keyframes eventHeadingEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.event-card {
+  position: relative;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(28px);
+
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+/*
+  The motion system adds .motion-visible
+  when the section enters the viewport.
+*/
+
+.motion-visible .event-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.motion-visible .event-card:nth-child(1) {
+  transition-delay: 80ms;
+}
+
+.motion-visible .event-card:nth-child(2) {
+  transition-delay: 160ms;
+}
+
+.motion-visible .event-card:nth-child(3) {
+  transition-delay: 240ms;
+}
+
+.motion-visible .event-card:nth-child(4) {
+  transition-delay: 320ms;
+}
+
+.motion-visible .event-card:nth-child(5) {
+  transition-delay: 400ms;
+}
+
+/* Subtle card interaction */
+
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.05),
+    transparent 45%
+  );
+
+  opacity: 0;
+  transition: opacity 300ms ease;
+
+  pointer-events: none;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(245, 158, 11, 0.25);
+
+  box-shadow:
+    0 18px 35px rgba(15, 23, 42, 0.07),
+    0 6px 14px rgba(15, 23, 42, 0.04);
+}
+
+.event-card:hover::before {
+  opacity: 1;
+}
+
+/* Date interaction */
+
+.event-date {
+  position: relative;
+  display: inline-block;
+  transition:
+    transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.event-card:hover .event-date {
+  transform: translateX(3px);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .event-heading,
+  .event-card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+  .event-card:hover {
+    transform: none;
+    box-shadow: inherit;
+  }
+
+  .event-card::before {
+    display: none;
+  }
+}
