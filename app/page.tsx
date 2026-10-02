@@ -362,83 +362,108 @@ export default function Home() {
 </section>
 
         {/* ANNUAL EVENTS & CELEBRATIONS */}
-        <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="text-center mb-16">
-            <span className="bg-amber-500/10 text-amber-600 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-amber-500/20 inline-block mb-3">
-              Calendar Highlights
-            </span>
+  <div className="text-center mb-16">
+    <span className="event-heading inline-block bg-amber-500/10 text-amber-600 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-amber-500/20 mb-3">
+      Calendar Highlights
+    </span>
 
-            <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
-              Annual Events & Celebrations
-            </h2>
-          </div>
+    <h2 className="event-heading text-3xl font-extrabold text-slate-900 sm:text-4xl">
+      Annual Events & Celebrations
+    </h2>
+  </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
-                May 1st
-              </span>
-              <h4 className="font-bold text-slate-900 text-lg mb-2">
-                Light City Foundational Laying Day
-              </h4>
-              <p className="text-slate-600 text-xs">
-                Commemorating the foundation of our ministry base.
-              </p>
-            </div>
+    {/* May */}
+    <div className="event-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="event-date">
+        <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
+          May 1st
+        </span>
+      </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
-                July 26th
-              </span>
-              <h4 className="font-bold text-slate-900 text-lg mb-2">
-                Combined Graduation & Thanksgiving
-              </h4>
-              <p className="text-slate-600 text-xs">
-                Celebrating student promotions and academic milestones.
-              </p>
-            </div>
+      <h4 className="font-bold text-slate-900 text-lg mb-2">
+        Light City Foundational Laying Day
+      </h4>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
-                September 18th
-              </span>
-              <h4 className="font-bold text-slate-900 text-lg mb-2">
-                RACO Schools Founding Day
-              </h4>
-              <p className="text-slate-600 text-xs">
-                Marking years of free basic education since 2007.
-              </p>
-            </div>
+      <p className="text-slate-600 text-xs leading-relaxed">
+        Commemorating the foundation of our ministry base.
+      </p>
+    </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
-                October 17th
-              </span>
-              <h4 className="font-bold text-slate-900 text-lg mb-2">
-                RACO Commission Annual Thanksgiving
-              </h4>
-              <p className="text-slate-600 text-xs">
-                Giving thanks for God's grace since establishment in 2003.
-              </p>
-            </div>
+    {/* July */}
+    <div className="event-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="event-date">
+        <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
+          July 26th
+        </span>
+      </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm md:col-span-2">
-              <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
-                December 19th – 23rd
-              </span>
-              <h4 className="font-bold text-slate-900 text-lg mb-2">
-                Christmas Grace Fun Fair & Widows Ceremony
-              </h4>
-              <p className="text-slate-600 text-xs">
-                Our joyful year-end celebration featuring festivities and
-                rural widows empowerment grants.
-              </p>
-            </div>
+      <h4 className="font-bold text-slate-900 text-lg mb-2">
+        Combined Graduation & Thanksgiving
+      </h4>
 
-          </div>
-        </section>
+      <p className="text-slate-600 text-xs leading-relaxed">
+        Celebrating student promotions and academic milestones.
+      </p>
+    </div>
+
+    {/* September */}
+    <div className="event-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="event-date">
+        <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
+          September 18th
+        </span>
+      </div>
+
+      <h4 className="font-bold text-slate-900 text-lg mb-2">
+        RACO Schools Founding Day
+      </h4>
+
+      <p className="text-slate-600 text-xs leading-relaxed">
+        Marking years of free basic education since 2007.
+      </p>
+    </div>
+
+    {/* October */}
+    <div className="event-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="event-date">
+        <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
+          October 17th
+        </span>
+      </div>
+
+      <h4 className="font-bold text-slate-900 text-lg mb-2">
+        RACO Commission Annual Thanksgiving
+      </h4>
+
+      <p className="text-slate-600 text-xs leading-relaxed">
+        Giving thanks for God's grace since establishment in 2003.
+      </p>
+    </div>
+
+    {/* December */}
+    <div className="event-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm md:col-span-2">
+      <div className="event-date">
+        <span className="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">
+          December 19th – 23rd
+        </span>
+      </div>
+
+      <h4 className="font-bold text-slate-900 text-lg mb-2">
+        Christmas Grace Fun Fair & Widows Ceremony
+      </h4>
+
+      <p className="text-slate-600 text-xs leading-relaxed">
+        Our joyful year-end celebration featuring festivities and
+        rural widows empowerment grants.
+      </p>
+    </div>
+
+  </div>
+</section>
 
         {/* LOCATIONS SECTION */}
         <section className="bg-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
