@@ -465,66 +465,103 @@ export default function Home() {
   </div>
 </section>
 
-        {/* LOCATIONS SECTION */}
-        <section className="bg-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        {/* LOCATIONS */}
+<section className="bg-white py-20 border-t border-slate-200">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div className="text-center mb-16">
-              <span className="bg-amber-500/10 text-amber-400 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-amber-500/20 inline-block mb-3">
-                Where to Find Us
-              </span>
+    <div className="text-center mb-14">
+      <span className="location-heading inline-block bg-amber-500/10 text-amber-600 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-amber-500/20 mb-3">
+        Where We Serve
+      </span>
 
-              <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                Our Locations
-              </h2>
-            </div>
+      <h2 className="location-heading text-3xl font-extrabold text-slate-900 sm:text-4xl">
+        Our Locations
+      </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <p className="location-heading max-w-2xl mx-auto mt-4 text-slate-600 text-sm leading-relaxed">
+        RACO serves children, families, widows, and communities across
+        Lagos and Ogun States through our care, education, empowerment,
+        and outreach programmes.
+      </p>
+    </div>
 
-              {/* Lagos State */}
-              <div className="bg-slate-800/80 p-8 rounded-3xl border border-slate-700">
-                <span className="text-amber-400 font-bold text-xs uppercase tracking-wider">
-                  Lagos State
-                </span>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                <h3 className="text-2xl font-bold text-white mt-1 mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-amber-500" />
-                  RACO Light House
-                </h3>
+      {/* Lagos */}
+      <div className="location-card group bg-slate-50 rounded-3xl border border-slate-200 p-8">
 
-                <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                  33 Taiwo Adebambo Street, Araromi, Ibeju Agbe, Ibeju Lekki
-                  LGA, Lagos State.
-                </p>
+        <div className="flex items-start gap-5">
 
-                <div className="bg-slate-900/60 p-4 rounded-xl text-xs text-amber-300 border border-slate-700/60">
-                  ✅ Official take-off center for fully executing the RACO mandate.
-                </div>
-              </div>
+          <div className="location-icon shrink-0 w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+            <MapPin className="w-7 h-7" />
+          </div>
 
-              {/* Ogun State */}
-              <div className="bg-slate-800/80 p-8 rounded-3xl border border-slate-700">
-                <span className="text-amber-400 font-bold text-xs uppercase tracking-wider">
-                  Ogun State (Headquarters)
-                </span>
+          <div>
+            <span className="text-amber-600 text-xs font-bold uppercase tracking-wider">
+              Lagos State
+            </span>
 
-                <h3 className="text-2xl font-bold text-white mt-1 mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-amber-500" />
-                  Topaz Gardens, Light City
-                </h3>
+            <h3 className="text-2xl font-bold text-slate-900 mt-1 mb-4">
+              RACO Light House
+            </h3>
 
-                <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                  Itawo, Itamapako, Off Ijebu Ode - Epe Expressway, By GUTS FM,
-                  Toll Gate, Off Oduagboju Bus Stop, Ijebu Ode LGA, Ogun State.
-                </p>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              33 Taiwo Adebambo Street, Araromi, Ibeju Agbe,
+              Ibeju Lekki LGA, Lagos State.
+            </p>
+          </div>
 
-                <div className="bg-slate-900/60 p-4 rounded-xl text-xs text-amber-300 border border-slate-700/60">
-                  Mission Control Tower & Home of RACO Primary School,
-                  Orphanage & Clinic.
-                </div>
-              </div>
+        </div>
 
-            </div>
+        <div className="location-divider mt-8 mb-6 h-px bg-slate-200" />
+
+        <div className="flex items-center gap-2 text-slate-500 text-xs">
+          <MapPin className="w-4 h-4 text-amber-500" />
+          <span>RACO Light House • Lagos</span>
+        </div>
+
+      </div>
+
+      {/* Ogun */}
+      <div className="location-card group bg-slate-50 rounded-3xl border border-slate-200 p-8">
+
+        <div className="flex items-start gap-5">
+
+          <div className="location-icon shrink-0 w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+            <MapPin className="w-7 h-7" />
+          </div>
+
+          <div>
+            <span className="text-amber-600 text-xs font-bold uppercase tracking-wider">
+              Ogun State • Headquarters
+            </span>
+
+            <h3 className="text-2xl font-bold text-slate-900 mt-1 mb-4">
+              Light City Headquarters
+            </h3>
+
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Topaz Gardens, Light City, Itawo, Itamapako,
+              Off Ijebu Ode - Epe Expressway, By GUTS FM,
+              Toll Gate, Off Oduagboju Bus Stop, Ijebu Ode LGA,
+              Ogun State.
+            </p>
+          </div>
+
+        </div>
+
+        <div className="location-divider mt-8 mb-6 h-px bg-slate-200" />
+
+        <div className="flex items-center gap-2 text-slate-500 text-xs">
+          <MapPin className="w-4 h-4 text-amber-500" />
+          <span>RACO Headquarters • Ogun State</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
             {/* Direct Contact Bar */}
             <div className="mt-12 bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-wrap justify-between items-center gap-6">
