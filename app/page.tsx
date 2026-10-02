@@ -563,48 +563,49 @@ export default function Home() {
   </div>
 </section>
 
-            {/* Direct Contact Bar */}
-            <div className="mt-12 bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-wrap justify-between items-center gap-6">
+            {/* CONTACT CTA */}
+<section className="contact-cta relative overflow-hidden bg-slate-900 py-16">
+  <div className="contact-cta-glow absolute inset-0 pointer-events-none" />
 
-              <div>
-                <h4 className="font-bold text-white text-base">
-                  Need to get in touch?
-                </h4>
+  <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="contact-cta-content text-center">
 
-                <p className="text-xs text-slate-400 mt-1">
-                  Call us or reach out instantly via WhatsApp.
-                </p>
-              </div>
+      <span className="contact-cta-item inline-flex items-center gap-2 bg-white/5 text-amber-400 border border-white/10 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider mb-5">
+        <MessageCircle className="w-3.5 h-3.5" />
+        Get in Touch
+      </span>
 
-              <div className="flex flex-wrap items-center gap-4">
+      <h2 className="contact-cta-item text-3xl sm:text-4xl font-extrabold text-white">
+        Be Part of the RACO Mission
+      </h2>
 
-                <a
-                  href="tel:08022628461"
-                  className="flex items-center gap-2 text-xs font-bold text-amber-400 bg-slate-900 px-4 py-3 rounded-xl border border-slate-700"
-                >
-                  <Phone className="w-4 h-4" />
-                  0802 262 8461
-                </a>
+      <p className="contact-cta-item max-w-2xl mx-auto mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+        Whether you want to support a child, partner with us,
+        volunteer, or learn more about our work, we'd love to hear
+        from you.
+      </p>
 
-                <a
-                  href="https://wa.me/2349060562048"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 px-5 py-3 rounded-xl transition shadow"
-                >
-                  <MessageCircle className="w-4 h-4 fill-current" />
-                  WhatsApp (+234 906 056 2048)
-                </a>
+      <div className="contact-cta-item flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
 
-              </div>
-            </div>
+        <a
+          href="tel:08022628461"
+          className="cta-button contact-action group inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-amber-500/10"
+        >
+          <Phone className="contact-action-icon w-4 h-4" />
+          <span>0802 262 8461</span>
+        </a>
 
-          </div>
-        </section>
+        <a
+          href="https://wa.me/2349060562048"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-button contact-action group inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-900/20"
+        >
+          <MessageCircle className="contact-action-icon w-4 h-4" />
+          <span>WhatsApp Us</span>
+        </a>
 
-      </main>
+      </div>
 
-      <Footer />
     </div>
-  );
-}
+  </div>
