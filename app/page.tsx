@@ -648,10 +648,13 @@ export default function Home() {
               0802 699 4164
             </span>
           </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
-        </div>
-      </div>
-
+      <Footer />
     </div>
-  </div>
-</section>
+  );
+      }
