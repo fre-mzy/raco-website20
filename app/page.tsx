@@ -208,158 +208,158 @@ export default function Home() {
 
         {/* CORE PILLARS / PROGRAMS GRID */}
         <section className="bg-slate-100 py-24 border-y border-slate-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div className="text-center mb-16">
-              <span className="bg-amber-500/10 text-amber-600 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-amber-500/20 inline-block mb-3">
-                What We Do
-              </span>
+    <div className="text-center mb-16">
+      <span className="bg-amber-500/10 text-amber-600 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-amber-500/20 inline-block mb-3">
+        What We Do
+      </span>
 
-              <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
-                Core Initiatives & Programs
-              </h2>
-            </div>
+      <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+        Core Initiatives & Programs
+      </h2>
+    </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-              {/* RACO School */}
-              <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                    <GraduationCap className="w-6 h-6" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    RACO Orphanage School
-                  </h3>
-
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
-                    Completely free nursery and primary education. Every child
-                    receives free tuition, textbooks, writing materials, daily
-                    nutritious school lunch, uniforms, and clothing items.
-                  </p>
-                </div>
-
-                <Link
-                  href="/programs"
-                  className="text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
-                >
-                  Learn more
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              {/* Empowering Women */}
-              <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                    <Briefcase className="w-6 h-6" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    Empowering Rural Women
-                  </h3>
-
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
-                    Vocational training and startup tools for rural widows in
-                    tailoring, catering, farming, food vending, and
-                    pepper/cassava grinding businesses.
-                  </p>
-                </div>
-
-                <Link
-                  href="/programs"
-                  className="text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
-                >
-                  Learn more
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              {/* Youth Skills */}
-              <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                    <Users className="w-6 h-6" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    Youth Skills & Trades
-                  </h3>
-
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
-                    Hands-on training in motorbike repair, shoe/bag making,
-                    electrical, plumbing, carpentry, aluminum work, and modern
-                    agribusiness.
-                  </p>
-                </div>
-
-                <Link
-                  href="/programs"
-                  className="text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
-                >
-                  Learn more
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              {/* Support for the Aged */}
-              <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                    <Heart className="w-6 h-6" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    Support for the Aged
-                  </h3>
-
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
-                    Extending love, daily meals, access to essential
-                    medications, and general welfare so no elderly person is
-                    left behind or forgotten.
-                  </p>
-                </div>
-
-                <Link
-                  href="/programs"
-                  className="text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
-                >
-                  Learn more
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-              {/* Medical Outreach */}
-              <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between md:col-span-2">
-                <div>
-                  <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                    <Stethoscope className="w-6 h-6" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    Free Medical Outreach & "RACO Life Centre" Clinic
-                  </h3>
-
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
-                    Consistent free healthcare services, medical outreaches,
-                    and consultations for children, women, the elderly, and
-                    the general public at our dedicated clinic.
-                  </p>
-                </div>
-
-                <Link
-                  href="/programs"
-                  className="text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
-                >
-                  Learn more
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-            </div>
+      {/* RACO School */}
+      <div className="program-card bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div className="program-icon w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+            <GraduationCap className="w-6 h-6" />
           </div>
-        </section>
+
+          <h3 className="text-xl font-bold text-slate-900 mb-3">
+            RACO Orphanage School
+          </h3>
+
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+            Completely free nursery and primary education. Every child
+            receives free tuition, textbooks, writing materials, daily
+            nutritious school lunch, uniforms, and clothing items.
+          </p>
+        </div>
+
+        <Link
+          href="/programs"
+          className="program-link text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
+        >
+          Learn more
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+      {/* Empowering Women */}
+      <div className="program-card bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div className="program-icon w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+            <Briefcase className="w-6 h-6" />
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mb-3">
+            Empowering Rural Women
+          </h3>
+
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+            Vocational training and startup tools for rural widows in
+            tailoring, catering, farming, food vending, and
+            pepper/cassava grinding businesses.
+          </p>
+        </div>
+
+        <Link
+          href="/programs"
+          className="program-link text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
+        >
+          Learn more
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+      {/* Youth Skills */}
+      <div className="program-card bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div className="program-icon w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+            <Users className="w-6 h-6" />
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mb-3">
+            Youth Skills & Trades
+          </h3>
+
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+            Hands-on training in motorbike repair, shoe/bag making,
+            electrical, plumbing, carpentry, aluminum work, and modern
+            agribusiness.
+          </p>
+        </div>
+
+        <Link
+          href="/programs"
+          className="program-link text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
+        >
+          Learn more
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+      {/* Support for the Aged */}
+      <div className="program-card bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div className="program-icon w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+            <Heart className="w-6 h-6" />
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mb-3">
+            Support for the Aged
+          </h3>
+
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+            Extending love, daily meals, access to essential
+            medications, and general welfare so no elderly person is
+            left behind or forgotten.
+          </p>
+        </div>
+
+        <Link
+          href="/programs"
+          className="program-link text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
+        >
+          Learn more
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+      {/* Medical Outreach */}
+      <div className="program-card bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between md:col-span-2">
+        <div>
+          <div className="program-icon w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+            <Stethoscope className="w-6 h-6" />
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mb-3">
+            Free Medical Outreach & "RACO Life Centre" Clinic
+          </h3>
+
+          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+            Consistent free healthcare services, medical outreaches,
+            and consultations for children, women, the elderly, and
+            the general public at our dedicated clinic.
+          </p>
+        </div>
+
+        <Link
+          href="/programs"
+          className="program-link text-amber-600 font-bold text-xs flex items-center gap-1 hover:underline"
+        >
+          Learn more
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* ANNUAL EVENTS & CELEBRATIONS */}
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
