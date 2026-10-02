@@ -24,26 +24,8 @@ html {
 }
 
 /* Automatically give tactile physics to all buttons and CTAs site-wide */
-button, 
-a.bg-amber-500, 
-a.bg-emerald-600, 
-.cta-button {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-button:hover, 
-a.bg-amber-500:hover, 
-a.bg-emerald-600:hover, 
-.cta-button:hover {
-  transform: scale(1.02);
-}
 
-button:active, 
-a.bg-amber-500:active, 
-a.bg-emerald-600:active, 
-.cta-button:active {
-  transform: scale(0.95);
-}
 
 /* =========================================
    RACO MOTION SYSTEM
