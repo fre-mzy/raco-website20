@@ -16,7 +16,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About & Trustees', href: '/about' },
   { name: 'Programs', href: '/programs' },
-  { name: 'University Scholars', href: '/university-scholars' },
+  { name: 'University Scholars', href: '/scholars' },
   { name: 'Gallery & Videos', href: '/gallery' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -186,7 +186,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
 
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/racochildcareng"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
