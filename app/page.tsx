@@ -585,27 +585,73 @@ export default function Home() {
         from you.
       </p>
 
-      <div className="contact-cta-item flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-
+      {/* Official WhatsApp */}
+      <div className="contact-cta-item mt-8">
         <a
-          href="tel:08022628461"
-          className="cta-button contact-action group inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-amber-500/10"
-        >
-          <Phone className="contact-action-icon w-4 h-4" />
-          <span>0802 262 8461</span>
-        </a>
-
-        <a
-          href="https://wa.me/2349060562048"
+          href="https://wa.me/2347080004902"
           target="_blank"
           rel="noopener noreferrer"
-          className="cta-button contact-action group inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-900/20"
+          className="cta-button contact-action inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-emerald-900/20"
         >
-          <MessageCircle className="contact-action-icon w-4 h-4" />
-          <span>WhatsApp Us</span>
+          <MessageCircle className="contact-action-icon w-5 h-5" />
+          <span>Chat with us on WhatsApp</span>
         </a>
 
+        <p className="text-slate-400 text-xs mt-3">
+          Official WhatsApp: <span className="text-slate-300 font-semibold">
+            0708 000 4902
+          </span>
+        </p>
+      </div>
+
+      {/* Hotlines */}
+      <div className="contact-cta-item mt-10">
+
+        <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-4">
+          Contact Hotlines
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+
+          {/* Hotline 1 */}
+          <a
+            href="tel:08022628461"
+            className="contact-hotline"
+          >
+            <Phone className="w-4 h-4" />
+            <span>
+              <small>Hotline 1 (ES)</small>
+              0802 262 8461
+            </span>
+          </a>
+
+          {/* Hotline 2 */}
+          <a
+            href="tel:09060562048"
+            className="contact-hotline"
+          >
+            <Phone className="w-4 h-4" />
+            <span>
+              <small>Hotline 2</small>
+              0906 056 2048
+            </span>
+          </a>
+
+          {/* Hotline 3 */}
+          <a
+            href="tel:08026994164"
+            className="contact-hotline"
+          >
+            <Phone className="w-4 h-4" />
+            <span>
+              <small>Hotline 3</small>
+              0802 699 4164
+            </span>
+          </a>
+
+        </div>
       </div>
 
     </div>
   </div>
+</section>
