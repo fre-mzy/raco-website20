@@ -168,3 +168,97 @@ a.bg-emerald-600:active,
     animation: none;
   }
 }
+
+/* =========================================
+   RACO PROGRAM CARD MOTION
+   ========================================= */
+
+.program-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 350ms ease,
+    border-color 350ms ease;
+}
+
+.program-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.04),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 350ms ease;
+  pointer-events: none;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.08),
+    0 8px 16px rgba(15, 23, 42, 0.05);
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.program-card:hover::before {
+  opacity: 1;
+}
+
+.program-icon {
+  position: relative;
+  z-index: 1;
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+.program-card:hover .program-icon {
+  transform: translateY(-3px) scale(1.06);
+  background-color: rgba(245, 158, 11, 0.16);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.12);
+}
+
+.program-link {
+  transition:
+    transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 200ms ease;
+}
+
+.program-link:hover {
+  transform: translateX(4px);
+  text-decoration: none;
+}
+
+.program-link svg {
+  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.program-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .program-card,
+  .program-icon,
+  .program-link,
+  .program-link svg {
+    transition: none;
+    transform: none;
+  }
+
+  .program-card:hover {
+    transform: none;
+    box-shadow: inherit;
+  }
+
+  .program-card::before {
+    display: none;
+  }
+}
