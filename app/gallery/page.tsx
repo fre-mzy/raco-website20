@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Image from 'next/image';
-import { ShieldAlert, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ShieldAlert, Sparkles, ChevronLeft, ChevronRight, Camera } from 'lucide-react';
 
 const galleryImages = [
   { src: "/Slide/IMG_20251113_073847~2.jpg", title: "RACO Community Outreach Moment 1" },
@@ -27,11 +27,11 @@ const galleryImages = [
   { src: "/Slide/IMG_20251219_125603.jpg", title: "Support for the Aged Ministry" },
   { src: "/Slide/IMG_20251219_125823.jpg", title: "Angel (from year 0 to 4+)" },
   { src: "/Slide/IMG_20251223_112730.jpg", title: "Mrs Daniel Elizabeth (ES)" },
-  { src: "/Slide/IMG_20251223_114313_1.jpg", title: "" },
+  { src: "/Slide/IMG_20251223_114313_1.jpg", title: "Outreach Collection" },
   { src: "/Slide/IMG_20251223_123121.jpg", title: "Media Team" },
   { src: "/Slide/IMG_20251223_123608.jpg", title: "Cultural Exchange" },
-  { src: "/Slide/IMG_20251223_123639.jpg", title: "" },
-  { src: "/Slide/IMG_20251223_134851.jpg", title: "" },
+  { src: "/Slide/IMG_20251223_123639.jpg", title: "Event Snapshot" },
+  { src: "/Slide/IMG_20251223_134851.jpg", title: "Special Moment" },
   { src: "/Slide/IMG_20251223_135034.jpg", title: "End of Year Outreach" },
   { src: "/Slide/IMG_20260612_181116.jpg", title: "Mid-Year Community Outreach" },
   { src: "/Slide/IMG_20260613_122541.jpg", title: "Field Monitoring & Support" },
@@ -50,91 +50,100 @@ export default function GalleryPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-amber-500 selection:text-slate-950">
       <Navbar />
 
-      <main className="flex-grow py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <span className="bg-amber-500/10 text-amber-600 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-amber-500/20 inline-flex items-center gap-1.5 mb-4">
-            <Sparkles className="w-3.5 h-3.5" /> Moments of Impact
-          </span>
-          <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl">Our Gallery</h1>
-          <p className="text-slate-600 max-w-2xl mx-auto mt-3 text-base">
-            Browse through captured moments of our school, welfare programs, and community outreaches.
-          </p>
-        </div>
-
-        {/* Government Safety Disclaimer Banner */}
-        <div className="bg-amber-50 border border-amber-500/30 rounded-2xl p-6 sm:p-8 mb-10 flex flex-col sm:flex-row items-center gap-5 shadow-sm">
-          <div className="w-12 h-12 bg-amber-500/20 text-amber-700 rounded-2xl flex items-center justify-center flex-shrink-0">
-            <ShieldAlert className="w-6 h-6" />
-          </div>
-          <div className="space-y-1 text-center sm:text-left">
-            <h2 className="text-base font-bold text-amber-900">Safety & Privacy Notice</h2>
-            <p className="text-amber-800/90 text-sm leading-relaxed">
-              Please note that we are limited in the amount of pictures we can upload for safety reasons by the government.
+      <main className="flex-grow">
+        {/* HERO BANNER */}
+        <section className="bg-slate-950 text-white py-20 lg:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.15),transparent_50%)] pointer-events-none"></div>
+          <div className="max-w-5xl mx-auto text-center relative z-10">
+            <span className="bg-amber-500/10 text-amber-400 font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-full border border-amber-500/20 inline-flex items-center gap-1.5 mb-6 shadow-inner">
+              <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Moments of Impact
+            </span>
+            <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight mb-6">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Gallery</span>
+            </h1>
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
+              Browse through captured moments of our school, welfare programs, and community outreaches.
             </p>
           </div>
-        </div>
+        </section>
 
-        {/* SLIDER CONTAINER */}
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden p-6 sm:p-8">
-          {/* Main Display Image */}
-          <div className="relative h-80 sm:h-[480px] w-full bg-slate-900 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center">
-            <Image 
-              src={galleryImages[currentIndex].src} 
-              alt={galleryImages[currentIndex].title} 
-              fill 
-              className="object-contain"
-              priority
-            />
-            
-            {/* Left/Right Arrow Buttons */}
-            <button 
-              onClick={prevSlide}
-              className="absolute left-4 bg-slate-900/70 hover:bg-slate-900 text-white p-3 rounded-full backdrop-blur-sm transition border border-white/10"
-              aria-label="Previous Slide"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button 
-              onClick={nextSlide}
-              className="absolute right-4 bg-slate-900/70 hover:bg-slate-900 text-white p-3 rounded-full backdrop-blur-sm transition border border-white/10"
-              aria-label="Next Slide"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-
-            {/* Slide Counter Badge */}
-            <div className="absolute top-4 right-4 bg-slate-900/80 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/10">
-              {currentIndex + 1} / {galleryImages.length}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Government Safety Disclaimer Banner */}
+          <div className="bg-amber-50/80 border border-amber-500/30 rounded-3xl p-6 sm:p-8 mb-10 flex flex-col sm:flex-row items-center gap-5 shadow-sm">
+            <div className="w-12 h-12 bg-amber-500/20 text-amber-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <ShieldAlert className="w-6 h-6" />
+            </div>
+            <div className="space-y-1 text-center sm:text-left">
+              <h2 className="text-base font-bold text-amber-900">Safety & Privacy Notice</h2>
+              <p className="text-amber-800/90 text-sm leading-relaxed">
+                Please note that we are limited in the amount of pictures we can upload for safety reasons by the government[span_1](start_span)[span_1](end_span).
+              </p>
             </div>
           </div>
 
-          {/* Active Image Title */}
-          <div className="mt-6 text-center">
-            <span className="text-xs font-bold text-amber-600 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full border border-amber-500/20">
-              Featured Photo
-            </span>
-            <h3 className="font-extrabold text-slate-900 text-lg sm:text-xl mt-2">
-              {galleryImages[currentIndex].title}
-            </h3>
-          </div>
-
-          {/* Thumbnail Strip for Easy Navigation */}
-          <div className="mt-8 pt-6 border-t border-slate-100 flex gap-3 overflow-x-auto pb-2 scrollbar-thin">
-            {galleryImages.map((img, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentIndex(idx)}
-                className={`relative flex-shrink-0 w-20 h-16 rounded-xl overflow-hidden border-2 transition ${
-                  currentIndex === idx ? 'border-amber-500 scale-105 shadow-md' : 'border-slate-200 opacity-60 hover:opacity-100'
-                }`}
+          {/* SLIDER CONTAINER */}
+          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden p-6 sm:p-8">
+            {/* Main Display Image */}
+            <div className="relative h-80 sm:h-[500px] w-full bg-slate-950 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center group">
+              <Image 
+                src={galleryImages[currentIndex].src} 
+                alt={galleryImages[currentIndex].title || "RACO Gallery Image"} 
+                fill 
+                className="object-contain transition-transform duration-500"
+                priority
+              />
+              
+              {/* Left/Right Arrow Buttons */}
+              <button 
+                onClick={prevSlide}
+                className="absolute left-4 bg-slate-900/80 hover:bg-amber-500 hover:text-slate-950 text-white p-3.5 rounded-full backdrop-blur-md transition border border-white/10 shadow-lg group-hover:scale-105"
+                aria-label="Previous Slide"
               >
-                <Image src={img.src} alt={img.title} fill className="object-cover" />
+                <ChevronLeft className="w-6 h-6" />
               </button>
-            ))}
+              <button 
+                onClick={nextSlide}
+                className="absolute right-4 bg-slate-900/80 hover:bg-amber-500 hover:text-slate-950 text-white p-3.5 rounded-full backdrop-blur-md transition border border-white/10 shadow-lg group-hover:scale-105"
+                aria-label="Next Slide"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Slide Counter Badge */}
+              <div className="absolute top-4 right-4 bg-slate-900/90 text-amber-400 text-xs font-bold px-3.5 py-1.5 rounded-full backdrop-blur-md border border-amber-500/30 shadow-md">
+                {currentIndex + 1} / {galleryImages.length}
+              </div>
+            </div>
+
+            {/* Active Image Title */}
+            <div className="mt-8 text-center space-y-2">
+              <span className="text-[10px] font-bold text-amber-600 uppercase tracking-widest bg-amber-50 border border-amber-500/20 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
+                <Camera className="w-3 h-3 text-amber-500" /> Featured Photo
+              </span>
+              <h3 className="font-extrabold text-slate-900 text-lg sm:text-2xl">
+                {galleryImages[currentIndex].title || "RACO Community Program"}
+              </h3>
+            </div>
+
+            {/* Thumbnail Strip for Easy Navigation */}
+            <div className="mt-8 pt-6 border-t border-slate-100 flex gap-3 overflow-x-auto pb-3 scrollbar-thin scrollbar-thumb-amber-500">
+              {galleryImages.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentIndex(idx)}
+                  className={`relative flex-shrink-0 w-20 h-16 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+                    currentIndex === idx 
+                      ? 'border-amber-500 ring-2 ring-amber-500/20 scale-105 shadow-md opacity-100' 
+                      : 'border-slate-200 opacity-50 hover:opacity-100 hover:scale-102'
+                  }`}
+                >
+                  <Image src={img.src} alt={img.title || "Thumbnail"} fill className="object-cover" />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </main>
@@ -142,4 +151,5 @@ export default function GalleryPage() {
       <Footer />
     </div>
   );
-}
+            }
+                    
