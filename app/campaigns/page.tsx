@@ -23,7 +23,7 @@ export default function CampaignsPage() {
         {/* Campaigns Grid */}
         <div className="space-y-12 mb-20">
           {/* Campaign 1: Back to School */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
             {/* Image Box */}
             <div className="lg:col-span-5 relative bg-slate-200 min-h-[300px] flex items-center justify-center p-8">
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent lg:hidden z-10"></div>
@@ -77,7 +77,7 @@ export default function CampaignsPage() {
           </div>
 
           {/* Campaign 2: Medical & Clinic */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
             {/* Image Box */}
             <div className="lg:col-span-5 relative bg-slate-200 min-h-[300px] flex items-center justify-center p-8">
               <div className="text-slate-500 text-xs font-semibold uppercase tracking-wider z-0 flex flex-col items-center gap-2 text-center">
@@ -119,4 +119,4 @@ export default function CampaignsPage() {
       <Footer />
     </div>
   );
-          }
+}
