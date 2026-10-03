@@ -35,19 +35,19 @@ export default function Programs() {
         </section>
 
         {/* PROGRAMS DETAILED SECTIONS */}
-        <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Program 1: RACO Orphanage School */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
+            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6 program-card">
+              <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center program-icon">
                 <GraduationCap className="w-6 h-6" />
               </div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
+              <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded inline-block">
                 Pillar 01
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900">RACO Orphanage & Primary School</h2>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                 Established on September 18, 2007, our school provides 100% free Nursery and Primary education to children in rural communities. We eliminate financial barriers by providing free textbooks, notebooks, writing materials, custom uniforms, school shoes, and daily hot lunches.
               </p>
               <ul className="space-y-3 text-sm text-slate-700 font-medium">
@@ -82,15 +82,15 @@ export default function Programs() {
                 className="object-cover"
               />
             </div>
-            <div className="space-y-6 order-1 lg:order-2">
-              <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
+            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6 order-1 lg:order-2 program-card">
+              <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center program-icon">
                 <Briefcase className="w-6 h-6" />
               </div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
+              <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded inline-block">
                 Pillar 02
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900">Empowering Rural Widows</h2>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                 Widows in rural areas often face extreme economic hardship. RACO equips them with practical vocational skills and startup capital, including cassava and pepper grinding machines, sewing equipment, and food vending support to ensure financial independence.
               </p>
               <ul className="space-y-3 text-sm text-slate-700 font-medium">
@@ -109,15 +109,15 @@ export default function Programs() {
 
           {/* Program 3: Support for the Aged */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center">
+            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6 program-card">
+              <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center program-icon">
                 <Heart className="w-6 h-6" />
               </div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
+              <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded inline-block">
                 Pillar 03
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900">Support for the Aged</h2>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                 Extending love, regular food packages, access to essential medications, and general welfare support to vulnerable elderly members in rural communities so no senior citizen is left behind or forgotten.
               </p>
               <ul className="space-y-3 text-sm text-slate-700 font-medium">
@@ -142,16 +142,16 @@ export default function Programs() {
             </div>
           </div>
 
-          {/* Program 4: Youth Vocational Training (Without Image) */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 sm:p-12">
-            <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+          {/* Program 4: Youth Vocational Training */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 sm:p-12 program-card">
+            <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6 program-icon">
               <Users className="w-6 h-6" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
+            <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded inline-block">
               Pillar 04
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-3">Youth Skills & Vocational Workshops</h2>
-            <p className="text-slate-600 leading-relaxed max-w-3xl mb-6">
+            <p className="text-slate-600 leading-relaxed max-w-3xl mb-6 text-sm sm:text-base">
               To combat youth unemployment and rural migration, we provide hands-on technical training in high-demand trades such as motorbike mechanics, electrical installation, plumbing, carpentry, shoe making, and modern agribusiness.
             </p>
             <ul className="space-y-3 text-sm text-slate-700 font-medium">
@@ -167,16 +167,16 @@ export default function Programs() {
             </ul>
           </div>
 
-          {/* Program 5: RACO Life Centre Clinic (Without Image) */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 sm:p-12">
-            <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+          {/* Program 5: RACO Life Centre Clinic */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 sm:p-12 program-card">
+            <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6 program-icon">
               <Stethoscope className="w-6 h-6" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded">
+            <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded inline-block">
               Pillar 05
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-3">Free Medical Outreach & Clinic</h2>
-            <p className="text-slate-600 leading-relaxed max-w-3xl mb-6">
+            <p className="text-slate-600 leading-relaxed max-w-3xl mb-6 text-sm sm:text-base">
               Access to basic healthcare is a major challenge in rural settlements. The RACO Life Centre clinic provides ongoing free medical consultations, essential malaria and infection treatments, deworming campaigns for children, and periodic full-scale community health outreaches.
             </p>
             <ul className="space-y-3 text-sm text-slate-700 font-medium">
@@ -203,7 +203,7 @@ export default function Programs() {
             </p>
             <Link
               href="/donate"
-              className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl text-sm transition inline-flex items-center gap-2"
+              className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl text-sm transition inline-flex items-center gap-2 cta-button"
             >
               Make a Donation <ArrowRight className="w-4 h-4" />
             </Link>
