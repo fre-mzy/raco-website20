@@ -52,7 +52,7 @@ export default function Donate() {
         <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Feed a Child */}
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-amber-500/30">
               <div>
                 <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
                   <Utensils className="w-6 h-6" />
@@ -79,7 +79,7 @@ export default function Donate() {
             </div>
 
             {/* Back to School */}
-            <div className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden">
+            <div className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <div className="absolute top-4 right-4 bg-amber-500 text-slate-950 font-extrabold text-[10px] uppercase px-3 py-1 rounded-full">
                 Most Needed
               </div>
@@ -105,7 +105,7 @@ export default function Donate() {
             </div>
 
             {/* Higher Education */}
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-amber-500/30">
               <div>
                 <div className="w-12 h-12 bg-slate-100 text-slate-900 rounded-2xl flex items-center justify-center mb-6">
                   <GraduationCap className="w-6 h-6" />
@@ -115,7 +115,6 @@ export default function Donate() {
                   Support our 34 undergraduates and JAMB scholars through university tuition, housing, and stipends.
                 </p>
                 <div className="mt-6 space-y-2">
-          
                   <div className="flex justify-between items-center text-xs font-semibold py-2">
                     <span className="text-slate-500">Annual University Sponsorship</span>
                     <span className="text-amber-600 font-extrabold text-base">₦350,000+</span>
@@ -144,7 +143,7 @@ export default function Donate() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* GTBank */}
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-500/30">
                 <div>
                   <span className="text-[10px] font-extrabold uppercase bg-amber-100 text-amber-800 px-2 py-0.5 rounded">GTBank (Primary)</span>
                   <p className="text-xs text-slate-500 mt-3 font-semibold">Account Name</p>
@@ -162,7 +161,7 @@ export default function Donate() {
               </div>
 
               {/* FCMB */}
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-500/30">
                 <div>
                   <span className="text-[10px] font-extrabold uppercase bg-slate-100 text-slate-800 px-2 py-0.5 rounded">FCMB</span>
                   <p className="text-xs text-slate-500 mt-3 font-semibold">Account Name</p>
@@ -180,7 +179,7 @@ export default function Donate() {
               </div>
 
               {/* Polaris */}
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-500/30">
                 <div>
                   <span className="text-[10px] font-extrabold uppercase bg-slate-100 text-slate-800 px-2 py-0.5 rounded">Polaris Bank</span>
                   <p className="text-xs text-slate-500 mt-3 font-semibold">Account Name</p>
@@ -206,7 +205,7 @@ export default function Donate() {
               <h3 className="text-lg font-bold text-slate-900">International Domiciliary Accounts (GTBank)</h3>
             </div>
 
-            <div className="bg-slate-900 text-white p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-lg">
+            <div className="bg-slate-900 text-white p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-lg transition-all duration-300 hover:shadow-xl">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <span className="text-amber-400 font-bold text-xs uppercase tracking-wider">USD Account ($)</span>
@@ -259,5 +258,4 @@ export default function Donate() {
       <Footer />
     </div>
   );
-                    }
-            
+        }
