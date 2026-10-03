@@ -20,7 +20,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Corporate HQ */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
             <div>
               <div className="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
                 <Building2 className="w-6 h-6" />
@@ -30,16 +30,16 @@ export default function Contact() {
               </span>
               <h3 className="font-extrabold text-xl text-slate-900 mt-3 mb-2">Light City - Ogun State</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                Mission Control Tower, Light City, Itawo, Itamapako, Off Ijebu Ode - Epe Expressway, By GUTS FM Toll Gate, Ijebu Ode LGA, Ogun State[span_0](start_span)[span_0](end_span).
+                Mission Control Tower, Light City, Itawo, Itamapako, Off Ijebu Ode - Epe Expressway, By GUTS FM Toll Gate, Ijebu Ode LGA, Ogun State.
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100 text-xs text-slate-500 font-medium">
-              Home of RACO Primary School, Orphanage & Life Centre Clinic[span_1](start_span)[span_1](end_span).
+              Home of RACO Primary School, Orphanage & Life Centre Clinic.
             </div>
           </div>
 
           {/* Lagos Take-Off Center */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
             <div>
               <div className="w-12 h-12 bg-slate-900 text-amber-500 rounded-2xl flex items-center justify-center mb-6">
                 <Building2 className="w-6 h-6" />
@@ -49,16 +49,16 @@ export default function Contact() {
               </span>
               <h3 className="font-extrabold text-xl text-slate-900 mt-3 mb-2">RACO Light House</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                33 Taiwo Adebambo Street, Araromi, Ibeju Agbe, Ibeju Lekki Local Government Area, Lagos State[span_2](start_span)[span_2](end_span).
+                33 Taiwo Adebambo Street, Araromi, Ibeju Agbe, Ibeju Lekki Local Government Area, Lagos State.
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100 text-xs text-slate-500 font-medium">
-              Administrative Hub & Urban Outreach Coordination Center[span_3](start_span)[span_3](end_span).
+              Administrative Hub & Urban Outreach Coordination Center.
             </div>
           </div>
 
           {/* Direct Communication Channels */}
-          <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-xl flex flex-col justify-between">
+          <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
             <div>
               <h3 className="font-bold text-lg text-amber-400 mb-6 flex items-center gap-2">
                 <Phone className="w-5 h-5" /> Direct Support Lines
