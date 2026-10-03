@@ -1,9 +1,223 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
-import { Heart, GraduationCap, Stethoscope, AlertCircle, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
+import { Heart, GraduationCap, Award, Sparkles, ShieldCheck, MapPin } from 'lucide-react';
 
-export default function CampaignsPage() {
+const scholars = [
+  {
+    name: "Oludare Oyinnijesu Enoch",
+    school: "Federal University of Technology Akure",
+    level: "100 Level",
+    faculty: "School of Electrical Systems Engineering",
+    department: "Electrical and Electronics Engineering",
+    phone: "09154196210",
+    address: "P.M.B. 704, Akure, Ondo State, Nigeria",
+    image: "/IMG-20260804-WA0044.jpg"
+  },
+  {
+    name: "Umoren Divine Favour",
+    school: "Federal University Oye Ekiti",
+    level: "300 Level",
+    faculty: "Education",
+    department: "Chemistry Education",
+    phone: "09060562048",
+    address: "Royalty Hostel SY8 School Road, Oye Ekiti",
+    image: "/IMG-20260804-WA0045.jpg"
+  },
+  {
+    name: "Awodele Elizabeth Praise",
+    school: "Ladoke Akintola University of Technology",
+    level: "200 Level (Going to 300)",
+    faculty: "Faculty of Management Sciences",
+    department: "Business Administration",
+    phone: "09060707382 / 08159713401",
+    address: "Ogbomoso, Taki, Oyo State",
+    image: "/IMG-20260804-WA0046.jpg"
+  },
+  {
+    name: "Olatidoye Oluwafeyikemisola Deborah",
+    school: "Tai Solarin Federal University of Education",
+    level: "400 Level",
+    faculty: "Education",
+    department: "Adult Education Development",
+    phone: "08025050445",
+    address: "Ijagun, Ijebu Ode",
+    image: "/IMG-20260804-WA0047.jpg"
+  },
+  {
+    name: "Yahaya Mathew Sunday",
+    school: "Federal University of Agriculture, Abeokuta",
+    level: "500 Level",
+    faculty: "COLPLANT",
+    department: "Soil Science and Land Management",
+    phone: "07061796990",
+    address: "Alabata Road, Abeokuta",
+    image: "/IMG-20260804-WA0050(1).jpg"
+  },
+  {
+    name: "Clay Blessing Ayomide",
+    school: "Tai Solarin College of Education (Affiliated with OOU)",
+    level: "300 Level",
+    faculty: "Voted",
+    department: "Business Education",
+    phone: "08052872846",
+    address: "Omu Jobore",
+    image: "/IMG-20260804-WA0057.jpg"
+  },
+  {
+    name: "Ojo Michael Jibola",
+    school: "Federal University of Agriculture, Abeokuta",
+    level: "300 Level",
+    faculty: "COLAMRUD",
+    department: "Agriculture Economics and Farm Management",
+    phone: "09121219206",
+    address: "Alabata Road, FUNAAB, Abeokuta, Ogun State",
+    image: "/IMG-20260804-WA0058.jpg"
+  },
+  {
+    name: "Adesoye Oluwaseyi Veronica",
+    school: "Maranatha University, Lagos",
+    level: "400 Level",
+    faculty: "Faculty of Pure and Applied Science",
+    department: "Industrial Chemistry",
+    phone: "08071862551",
+    address: "Lagos, Nigeria",
+    image: "/IMG-20260804-WA0061.jpg"
+  },
+  {
+    name: "Owodunni Abosede Emmanuella",
+    school: "Tai Solarin Federal University of Education (TASUED)",
+    level: "300 Level",
+    faculty: "Education",
+    department: "Early Childhood Education",
+    phone: "09158415182",
+    address: "Dolphins Dive, Ijagun, Ijebu Ode, Ogun State",
+    image: "/IMG-20260804-WA0062.jpg"
+  },
+  {
+    name: "Adefuye Abosede Juliana",
+    school: "Federal University of Agriculture and Development Studies, Iragbiji (FUADSI)",
+    level: "Awaiting",
+    faculty: "Faculty of Natural and Applied Sciences",
+    department: "Department of Microbiology",
+    phone: "09123716830",
+    address: "University Road, Iragbiji, Osun State, Nigeria",
+    image: "/IMG-20260804-WA0065.jpg"
+  },
+  {
+    name: "Efunkoya Ifeoluwa Maria",
+    school: "Tai Solarin Federal University of Education (TASUED)",
+    level: "300 Level",
+    faculty: "Education",
+    department: "Library and Information Science",
+    phone: "07078958091",
+    address: "Ijagun, Ijebu Ode, Ogun State",
+    image: "/IMG-20260804-WA0068.jpg"
+  },
+  {
+    name: "Olakitan Olarewaju Sebastine",
+    school: "Federal University of Benin, Edo State",
+    level: "Awaiting Call-up Letter",
+    faculty: "Social Science",
+    department: "Political Science",
+    phone: "07078767385",
+    address: "Federal University of Benin, Ugbowo, Edo State",
+    image: "/IMG-20260804-WA0070.jpg"
+  },
+  {
+    name: "Adjarho Miracle Efeoghene",
+    school: "Lagos State University",
+    level: "200 Level",
+    faculty: "Management Sciences",
+    department: "Business Administration",
+    phone: "09136580160",
+    address: "Lagos-Badagry Expressway, Ojo, Lagos",
+    image: "/IMG-20260804-WA0078.jpg"
+  },
+  {
+    name: "Odedeji Damilola Elizabeth",
+    school: "Federal University Oye Ekiti",
+    level: "300 Level",
+    faculty: "Education",
+    department: "Chemistry Education",
+    phone: "09138455452",
+    address: "Idofin Street, Oye Ekiti",
+    image: "/IMG-20260804-WA0083.jpg"
+  },
+  {
+    name: "Kadiri Joy Ayomide",
+    school: "Maranatha University, Lagos",
+    level: "400 Level",
+    faculty: "Faculty of Art, Management and Social Science",
+    department: "Economics",
+    phone: "08083746437",
+    address: "Lagos, Nigeria",
+    image: "/IMG-20260804-WA0106.jpg"
+  },
+  {
+    name: "Iwezua Joy",
+    school: "Ambrose Alli University",
+    level: "Awaiting",
+    faculty: "Life Science",
+    department: "Biochemistry",
+    phone: "09154446568",
+    address: "Ekpoma, Benin City",
+    image: "/IMG-20260804-WA0107.jpg"
+  },
+  {
+    name: "Onafuye Hannah Anuoluwapo",
+    school: "Tai Solarin Federal University of Education",
+    level: "200 Level",
+    faculty: "Education",
+    department: "Early Childhood Education",
+    phone: "07034429859",
+    address: "Ijagun, Ijebu Ode, Ogun State",
+    image: "/IMG-20260804-WA0108.jpg"
+  },
+  {
+    name: "Abraham Susan Ayomide",
+    school: "Tai Solarin Federal University of Education",
+    level: "Awaiting",
+    faculty: "Education",
+    department: "Early Childhood Education",
+    phone: "09168965808",
+    address: "Tai-Solarin Federal University Of Education, Ijagun, Ijebuode",
+    image: "/IMG-20260804-WA0134.jpg"
+  },
+  {
+    name: "Obong Victory Edikan",
+    school: "Tai Solarin Federal University of Education",
+    level: "Awaiting",
+    faculty: "Education",
+    department: "English Education",
+    phone: "07043875181",
+    address: "Ijagun, Ijebu Ode, Ogun State",
+    image: "/IMG-20260805-WA0028.jpg"
+  },
+  {
+    name: "Orovwigho Oghenetejiri Wisdom",
+    school: "Federal University of Petroleum Resources Effurun, Delta",
+    level: "200 Level",
+    faculty: "College of Engineering and Technology",
+    department: "Natural Gas Engineering",
+    phone: "09054229731",
+    address: "Warri, Delta State",
+    image: "/IMG-20260805-WA0031(1).jpg"
+  },
+  {
+    name: "Umoren Wealth",
+    school: "Federal University Oye-Ekiti (FUOYE)",
+    level: "200 Level",
+    faculty: "Life Science",
+    department: "Environmental Management and Toxicology",
+    phone: "08061933899",
+    address: "Royalty Hostel SY8 Oye Ekiti School Road",
+    image: "/IMG-20260805-WA0032.jpg"
+  }
+];
+
+export default function UniversityScholarsPage() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
       <Navbar />
@@ -11,112 +225,94 @@ export default function CampaignsPage() {
       <main className="flex-grow py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="bg-red-500/10 text-red-600 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-red-500/20 inline-flex items-center gap-1.5 mb-4">
-            <AlertCircle className="w-3.5 h-3.5" /> Urgent Community Appeals & Projects
+          <span className="bg-amber-500/10 text-amber-600 font-semibold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border border-amber-500/20 inline-flex items-center gap-1.5 mb-4">
+            <GraduationCap className="w-3.5 h-3.5" /> Higher Education & Tertiary Program
           </span>
-          <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl">Active Campaigns & Urgent Needs</h1>
+          <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl">University & Tertiary Scholars</h1>
           <p className="text-slate-600 max-w-2xl mx-auto mt-4 text-base">
-            Partner with us to meet critical funding goals for our children's education, healthcare, and daily welfare. Your support transforms rural communities.
+            Empowering our brilliant graduates from the RACO basic education system as they transition into universities, polytechnics, and colleges of education to pursue professional degrees.
           </p>
         </div>
 
-        {/* Campaigns Grid */}
-        <div className="space-y-12 mb-20">
-          {/* Campaign 1: Back to School */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-            {/* Image Box */}
-            <div className="lg:col-span-5 relative bg-slate-200 min-h-[300px] flex items-center justify-center p-8">
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent lg:hidden z-10"></div>
-              <div className="text-slate-500 text-xs font-semibold uppercase tracking-wider z-0 flex flex-col items-center gap-2 text-center">
-                <GraduationCap className="w-12 h-12 text-slate-400" />
-                <span>[ Back-to-School Campaign Photo / Children Learning ]</span>
-              </div>
-              <span className="absolute top-4 left-4 z-20 bg-amber-500 text-slate-950 font-extrabold text-xs px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-md">
-                Priority Project
-              </span>
-            </div>
+        {/* Featured Impact Banner */}
+        <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 mb-16 shadow-xl relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-transparent pointer-events-none"></div>
+          <div className="lg:col-span-7 space-y-4 relative z-10">
+            <span className="text-amber-400 font-bold text-xs uppercase tracking-widest flex items-center gap-1.5">
+              <Sparkles className="w-4 h-4" /> Tertiary Education Sponsorship
+            </span>
+            <h2 className="text-3xl font-extrabold tracking-tight">Fueling Higher Academic Ambitions</h2>
+            <p className="text-slate-300 text-sm leading-relaxed">
+              Transitioning from secondary school to a university comes with heavy financial hurdles for orphaned and rural youth. Our tertiary scholarship fund helps cover tuition, acceptance fees, books, and accommodation so they can focus entirely on bagging their degrees.
+            </p>
+          </div>
+          <div className="lg:col-span-5 flex justify-lg-end relative z-10">
+            <Link
+              href="/donate"
+              className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold px-8 py-4 rounded-xl text-sm uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto"
+            >
+              <Heart className="w-4 h-4 fill-slate-950" /> Support a University Scholar
+            </Link>
+          </div>
+        </div>
 
-            {/* Content Box */}
-            <div className="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">
-                  <Sparkles className="w-4 h-4" /> Academic Session Support
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">
-                  Back-to-School Support & Material Fund
-                </h2>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  As a new academic session approaches, hundreds of our orphaned and vulnerable children across rural communities urgently need your help. The funds raised will directly cover tuition fees, free notebooks, textbooks, writing materials, school uniforms, sandals, and daily school meals to keep them learning and thriving.
-                </p>
-
-                {/* Progress Bar */}
-                <div className="space-y-2 mb-8 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                  <div className="flex justify-between text-xs font-bold">
-                    <span className="text-slate-700">Target Goal</span>
-                    <span className="text-amber-600">₦27,000,000</span>
-                  </div>
-                  <div className="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
-                    <div className="bg-amber-500 h-full rounded-full w-1/3"></div>
-                  </div>
-                  <p className="text-[11px] text-slate-500 text-right">Every contribution directly impacts a child's education.</p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100">
-                <Link
-                  href="/donate"
-                  className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold py-3.5 px-8 rounded-xl text-sm uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-md"
-                >
-                  <Heart className="w-4 h-4 fill-slate-950" /> Donate to Back-to-School
-                </Link>
-                <span className="text-xs text-slate-500 flex items-center gap-1">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" /> 100% Secure & Verified
+        {/* University Scholars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {scholars.map((scholar, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              {/* Image Container */}
+              <div className="relative h-64 bg-slate-200 overflow-hidden">
+                <Image 
+                  src={scholar.image} 
+                  alt={scholar.name} 
+                  fill 
+                  className="object-cover" 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <span className="absolute top-4 right-4 bg-amber-500 text-slate-950 font-bold text-xs px-3 py-1 rounded-lg shadow z-10">
+                  {scholar.level}
                 </span>
               </div>
-            </div>
-          </div>
 
-          {/* Campaign 2: Medical & Clinic */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-            {/* Image Box */}
-            <div className="lg:col-span-5 relative bg-slate-200 min-h-[300px] flex items-center justify-center p-8">
-              <div className="text-slate-500 text-xs font-semibold uppercase tracking-wider z-0 flex flex-col items-center gap-2 text-center">
-                <Stethoscope className="w-12 h-12 text-slate-400" />
-                <span>[ RACO Life Centre Clinic & Medical Outreach Photo ]</span>
-              </div>
-              <span className="absolute top-4 left-4 z-20 bg-red-600 text-white font-extrabold text-xs px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-md">
-                Ongoing Need
-              </span>
-            </div>
-
-            {/* Content Box */}
-            <div className="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 text-xs font-bold text-red-600 uppercase tracking-widest mb-2">
-                  <Sparkles className="w-4 h-4" /> Healthcare & Wellness
+              {/* Content Container */}
+              <div className="p-6 sm:p-8 flex flex-col justify-between flex-grow">
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-amber-600 uppercase tracking-widest mb-1">
+                    <Award className="w-3.5 h-3.5" /> {scholar.department}
+                  </div>
+                  <h3 className="text-xl font-extrabold text-slate-900 mb-2">{scholar.name}</h3>
+                  
+                  <div className="space-y-1.5 text-xs text-slate-600 mb-6">
+                    <p className="font-semibold text-slate-800">{scholar.school}</p>
+                    <p><span className="text-slate-400">Faculty:</span> {scholar.faculty}</p>
+                    <p className="flex items-start gap-1 pt-1">
+                      <MapPin className="w-3.5 h-3.5 text-amber-600 flex-shrink-0 mt-0.5" /> 
+                      <span>{scholar.address}</span>
+                    </p>
+                  </div>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">
-                  RACO Life Centre Clinic Supplies & Outreaches
-                </h2>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  Stocking essential medications, first aid supplies, and provisions for free health checkups for rural children, widows, and the aged. Your support keeps our medical clinic active and fully stocked to serve those who cannot afford medical bills.
-                </p>
-              </div>
 
-              <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100">
-                <Link
-                  href="/donate"
-                  className="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-8 rounded-xl text-sm uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-md"
-                >
-                  <Heart className="w-4 h-4 text-amber-400 fill-amber-400" /> Support Healthcare Fund
-                </Link>
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <span className="text-[11px] text-emerald-700 font-medium flex items-center gap-1">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600" /> Verified Scholar
+                  </span>
+                  <Link
+                    href="/donate"
+                    className="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1"
+                  >
+                    Support <Heart className="w-3 h-3 fill-amber-600" />
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </main>
 
       <Footer />
     </div>
   );
-}
+        }
