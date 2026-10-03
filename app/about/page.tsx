@@ -106,10 +106,10 @@ export default function About() {
                 Restoring Hope, Dignity & Future Opportunity
               </h2>
               <p className="text-slate-600 leading-relaxed text-base">
-                The RACO Commission was established on October 17, 2003[span_0](start_span)[span_0](end_span). Recognizing the desperate need for basic literacy among orphans and vulnerable children, RACO Schools was launched on September 18, 2007[span_1](start_span)[span_1](end_span).
+                The RACO Commission was established on October 17, 2003. Recognizing the desperate need for basic literacy among orphans and vulnerable children, RACO Schools was launched on September 18, 2007.
               </p>
               <p className="text-slate-600 leading-relaxed text-base">
-                We provide 100% free Nursery and Primary education, complete with textbooks, uniforms, writing materials, and daily hot meals[span_2](start_span)[span_2](end_span).
+                We provide 100% free Nursery and Primary education, complete with textbooks, uniforms, writing materials, and daily hot meals.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -137,7 +137,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Our Mission</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  To provide shelter, free quality basic education, healthcare, emotional stability, and vocational training to orphans and vulnerable children while empowering rural widows and the elderly[span_3](start_span)[span_3](end_span).
+                  To provide shelter, free quality basic education, healthcare, emotional stability, and vocational training to orphans and vulnerable children while empowering rural widows and the elderly.
                 </p>
               </div>
 
@@ -148,7 +148,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-white">Our Vision</h3>
                 <p className="text-slate-300 text-sm leading-relaxed">
-                  To eliminate rural illiteracy across Nigeria, expanding our reach from 400+ children to a target of over 3,000 beneficiaries[span_4](start_span)[span_4](end_span).
+                  To eliminate rural illiteracy across Nigeria, expanding our reach from 400+ children to a target of over 3,000 beneficiaries.
                 </p>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function About() {
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">Board of Trustees</h2>
               <p className="text-slate-600 max-w-2xl mx-auto mt-3 text-sm">
-                Our board ensures financial transparency, spiritual integrity, and strategic impact across all RACO operations[span_5](start_span)[span_5](end_span).
+                Our board ensures financial transparency, spiritual integrity, and strategic impact across all RACO operations.
               </p>
             </div>
 
@@ -205,7 +205,7 @@ export default function About() {
               Our Locations
             </span>
             <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-3">Our Operational Centers</h2>
-            <p className="text-slate-600 text-sm mt-2 max-w-lg mx-auto">RACO operates across two strategic locations in South-West Nigeria[span_6](start_span)[span_6](end_span)</p>
+            <p className="text-slate-600 text-sm mt-2 max-w-lg mx-auto">RACO operates across two strategic locations in South-West Nigeria</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -219,10 +219,10 @@ export default function About() {
                 </span>
                 <h3 className="text-xl font-extrabold text-slate-900 mt-2 mb-2">Light City - Ogun State</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  Mission Control Tower, Light City, Itawo, Itamapako, Off Ijebu Ode - Epe Expressway, By GUTS FM Toll Gate, Ijebu Ode LGA[span_7](start_span)[span_7](end_span).
+                  Mission Control Tower, Light City, Itawo, Itamapako, Off Ijebu Ode - Epe Expressway, By GUTS FM Toll Gate, Ijebu Ode LGA.
                 </p>
                 <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">
-                  <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0" /> Home of RACO School, Orphanage & Life Centre Clinic[span_8](start_span)[span_8](end_span)
+                  <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0" /> Home of RACO School, Orphanage & Life Centre Clinic
                 </div>
               </div>
             </div>
@@ -237,10 +237,10 @@ export default function About() {
                 </span>
                 <h3 className="text-xl font-extrabold text-slate-900 mt-2 mb-2">RACO Light House - Lagos State</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  33 Taiwo Adebambo Street, Araromi, Ibeju Agbe, Ibeju Lekki LGA, Lagos State[span_9](start_span)[span_9](end_span).
+                  33 Taiwo Adebambo Street, Araromi, Ibeju Agbe, Ibeju Lekki LGA, Lagos State.
                 </p>
                 <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">
-                  <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0" /> Administrative Hub & Urban Outreach Coordination[span_10](start_span)[span_10](end_span)
+                  <MapPin className="w-4 h-4 text-amber-500 flex-shrink-0" /> Administrative Hub & Urban Outreach Coordination
                 </div>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function About() {
           <div className="max-w-2xl mx-auto relative z-10 space-y-4">
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Partner With Our Leadership Board</h2>
             <p className="text-slate-300 text-sm max-w-xl mx-auto mb-8 leading-relaxed">
-              Help us expand RACO Schools to reach over 3,000 children in rural communities[span_11](start_span)[span_11](end_span). Every contribution directly impacts a child's future.
+              Help us expand RACO Schools to reach over 3,000 children in rural communities. Every contribution directly impacts a child's future.
             </p>
             <div className="flex justify-center">
               <Link
