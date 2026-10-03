@@ -145,7 +145,7 @@ export default function Home() {
               </span>
 
               <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl leading-tight">
-                Reintegrating Each Child For a Life of Purpose
+                Transforming Vulnerable Lives Through Faith, Care, and Education
               </h2>
 
               <p className="text-slate-600 leading-relaxed text-base">
